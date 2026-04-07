@@ -80,4 +80,3 @@ claude "Help me create an interview guide for my B2B SaaS product"
 3. **Iterate** — Refine your prompt if the first result isn't right
 4. **Admit unknowns** — Tell the AI "I don't know this" rather than guessing
 
-z
