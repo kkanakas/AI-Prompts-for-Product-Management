@@ -10,7 +10,7 @@ This repo organizes proven PM prompts into a **Claude Code**–compatible skill 
 ## Repository Structure
 
 ```
-ai-pm-prompts/
+AI-Prompts-for-Product-Management/
 ├── SKILL.md                          # Skill entry point (for Claude Code)
 ├── README.md                         # This file
 ├── prompts/
