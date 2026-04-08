@@ -14,6 +14,11 @@ AI-Prompts-for-Product-Management/
 ├── SKILL.md                          # Skill entry point (for Claude Code)
 ├── README.md                         # This file
 ├── prompts/
+│   ├── architecture-diagrams-generation/
+│   ├── competitive-analysis/
+│   │   ├── 01-positioning-messaging.md
+│   │   ├── 02-feature-comparison.md
+│   │   └── 03-target-customers.md
 │   ├── customer-discovery/
 │   │   ├── 01-interview-guide.md
 │   │   ├── 02-blind-spot-detection.md
@@ -25,28 +30,32 @@ AI-Prompts-for-Product-Management/
 │   │   ├── 08-survey-open-ended.md
 │   │   ├── 09-survey-segment-comparison.md
 │   │   └── 10-multi-source-patterns.md
-│   ├── synthetic-users/
-│   │   ├── 01-create-synthetic-user.md
-│   │   └── 02-interview-synthetic-user.md
-│   ├── market-research/
-│   │   ├── 01-structured-market-analysis.md
-│   │   └── 02-evidence-and-contradictions.md
-│   ├── competitive-analysis/
-│   │   ├── 01-positioning-messaging.md
-│   │   ├── 02-feature-comparison.md
-│   │   └── 03-target-customers.md
-│   ├── trend-analysis/
-│   │   ├── 01-feedback-trends.md
-│   │   └── 02-industry-trends.md
-│   ├── ideation/
-│   │   └── 01-problem-to-solution.md
 │   ├── idea-evaluation/
 │   │   ├── 01-rice-scoring.md
 │   │   ├── 02-pre-mortem.md
 │   │   ├── 03-assumption-mapping.md
 │   │   └── 04-validation-questions.md
-│   └── prototyping/
-│       └── 01-ui-prototype-spec.md
+│   ├── ideation/
+│   │   ├── 01-problem-to-solution.md
+│   │   └── Ideation1.md
+│   ├── market-research/
+│   │   ├── 01-structured-market-analysis.md
+│   │   └── 02-evidence-and-contradictions.md
+│   ├── metrics/
+│   ├── prds/
+│   │   └── 01-prd-generation.md
+│   ├── prototyping/
+│   │   └── 01-ui-prototype-spec.md
+│   ├── release-notes-generator/
+│   │   └── 01-release-notes-generator.md
+│   ├── synthetic-users/
+│   │   ├── 01-create-synthetic-user.md
+│   │   └── 02-interview-synthetic-user.md
+│   ├── trend-analysis/
+│   │   ├── 01-feedback-trends.md
+│   │   └── 02-industry-trends.md
+│   └── user-journey-maps/
+│       └── 01-user-journey-map.md
 ├── examples/
 │   ├── problem-refinement-example.md
 │   └── stock-portfolio-example.md
