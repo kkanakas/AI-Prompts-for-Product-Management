@@ -14,7 +14,8 @@ AI-Prompts-for-Product-Management/
 ├── SKILL.md                          # Skill entry point (for Claude Code)
 ├── README.md                         # This file
 ├── prompts/
-│   ├── architecture-diagrams-generation/
+│   ├── architecture-diagrams/
+│   │   └── 01-sequence-diagram-from-repo.md
 │   ├── competitive-analysis/
 │   │   ├── 01-positioning-messaging.md
 │   │   ├── 02-feature-comparison.md
@@ -42,6 +43,7 @@ AI-Prompts-for-Product-Management/
 │   │   ├── 01-structured-market-analysis.md
 │   │   └── 02-evidence-and-contradictions.md
 │   ├── metrics/
+│   │   └── 01-feature-success-metrics.md
 │   ├── prds/
 │   │   └── 01-prd-generation.md
 │   ├── prototyping/
