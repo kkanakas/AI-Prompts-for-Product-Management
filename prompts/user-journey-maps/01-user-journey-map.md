@@ -26,9 +26,7 @@ OUTPUT:
 ## Placeholders
 
 | Variable | Description |
-
 | --- | --- |
-
-|`[FEATURE DESCRIPTION]`| Description of the Feature |
-| `[GENERAL FLOW OF ACTIVITY OR ACTIVITIES]` | link to documents or text descrition of the flow of activities |
-| `[MERMAID SEQUENCE DIAGRAM]` |  Generate a Mermaid sequence diagram and embeded it in the document |
+| `[FEATURE DESCRIPTION]` | Description of the Feature |
+| `[GENERAL FLOW OF ACTIVITY OR ACTIVITIES]` | Link to documents or text description of the flow of activities |
+| `[MERMAID SEQUENCE DIAGRAM]` | Generate a Mermaid sequence diagram and embed it in the document |
