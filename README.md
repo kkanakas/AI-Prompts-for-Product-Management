@@ -38,7 +38,7 @@ AI-Prompts-for-Product-Management/
 │   │   └── 04-validation-questions.md
 │   ├── ideation/
 │   │   ├── 01-problem-to-solution.md
-│   │   └── Ideation1.md
+│   │   └── 02-Ideation.md
 │   ├── market-research/
 │   │   ├── 01-structured-market-analysis.md
 │   │   └── 02-evidence-and-contradictions.md
