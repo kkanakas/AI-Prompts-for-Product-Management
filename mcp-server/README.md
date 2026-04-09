@@ -107,20 +107,30 @@ That's it. `mcp.run()` reads from stdin and writes to stdout in the MCP wire for
 
 ## Setup
 
-### 1. Install the dependency
+### 1. Create and activate a virtual environment
 
 ```bash
 cd mcp-server
+python3 -m venv .venv
+source .venv/bin/activate   # macOS / Linux
+# .venv\Scripts\activate    # Windows
+```
+
+Your prompt will change to `(.venv)` confirming the environment is active.
+
+### 2. Install the dependency
+
+```bash
 pip install -r requirements.txt
 ```
 
-Or with `uv` (faster):
+Or with `uv` (faster, no venv needed — it manages isolation automatically):
 
 ```bash
 uv pip install -r requirements.txt
 ```
 
-### 2. Test it locally
+### 3. Test it locally
 
 ```bash
 python server.py
@@ -147,14 +157,14 @@ Add this block to `~/Library/Application Support/Claude/claude_desktop_config.js
 {
   "mcpServers": {
     "pm-prompts": {
-      "command": "python",
+      "command": "/absolute/path/to/mcp-server/.venv/bin/python",
       "args": ["/absolute/path/to/AI-Prompts-for-Product-Management/mcp-server/server.py"]
     }
   }
 }
 ```
 
-Replace the path with the actual absolute path on your machine, then restart Claude Desktop.
+Point `command` at the **venv's Python binary** (`mcp-server/.venv/bin/python`) so Claude Desktop uses the environment where `mcp` is installed. Replace both paths with the actual absolute paths on your machine, then restart Claude Desktop.
 
 **Using `uv` (recommended for isolation):**
 
@@ -179,7 +189,7 @@ Replace the path with the actual absolute path on your machine, then restart Cla
 ## Connect to Claude Code (CLI)
 
 ```bash
-claude mcp add pm-prompts python /absolute/path/to/mcp-server/server.py
+claude mcp add pm-prompts /absolute/path/to/mcp-server/.venv/bin/python /absolute/path/to/mcp-server/server.py
 ```
 
 Or add it to your project's `.claude/settings.json`:
@@ -188,7 +198,7 @@ Or add it to your project's `.claude/settings.json`:
 {
   "mcpServers": {
     "pm-prompts": {
-      "command": "python",
+      "command": "./mcp-server/.venv/bin/python",
       "args": ["./mcp-server/server.py"]
     }
   }
