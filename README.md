@@ -40,7 +40,8 @@ AI-Prompts-for-Product-Management/
 │   │   ├── 01-problem-to-solution.md
 │   │   ├── 02-Ideation.md
 │   │   ├── 03-scamper-analysis.md
-│   │   └── 04-vrio-analysis.md
+│   │   ├── 04-vrio-analysis.md
+│   │   └── 05-mece-analysis.md
 │   ├── market-research/
 │   │   ├── 01-structured-market-analysis.md
 │   │   └── 02-evidence-and-contradictions.md
