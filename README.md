@@ -133,6 +133,26 @@ Or connect via Claude Code CLI:
 claude mcp add pm-prompts /absolute/path/to/mcp-server/.venv/bin/python /absolute/path/to/mcp-server/server.py
 ```
 
+**Connect to GitHub Copilot (VS Code):**
+
+Create `.vscode/mcp.json` in this workspace root (or open the Command Palette → **MCP: Open User Configuration** for a global config):
+
+```json
+{
+  "servers": {
+    "pm-prompts": {
+      "type": "stdio",
+      "command": "/absolute/path/to/mcp-server/.venv/bin/python",
+      "args": ["/absolute/path/to/AI-Prompts-for-Product-Management/mcp-server/server.py"]
+    }
+  }
+}
+```
+
+> Note: VS Code uses `"servers"` as the root key, not `"mcpServers"`.
+
+Then in Copilot Chat, switch to **Agent** mode — MCP tools are only available there. Click the Tools icon in the chat input to confirm `list_prompts`, `search_prompts`, `fill_prompt`, and others are listed.
+
 See [mcp-server/README.md](mcp-server/README.md) for the full setup guide, Claude Code integration, and an MCP tutorial.
 
 ## Prompt Engineering Principles
