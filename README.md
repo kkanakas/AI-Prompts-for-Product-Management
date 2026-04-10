@@ -64,6 +64,10 @@ AI-Prompts-for-Product-Management/
 ├── examples/
 │   ├── problem-refinement-example.md
 │   └── stock-portfolio-example.md
+├── mcp-server/
+│   ├── server.py                         # MCP server exposing prompts as tools
+│   ├── requirements.txt
+│   └── README.md                         # MCP setup & tutorial
 └── scripts/
     ├── run-prompt.sh
     └── list-prompts.sh
@@ -86,6 +90,50 @@ claude "Help me create an interview guide for my B2B SaaS product"
   --problem "onboarding friction for SMB users" \
   --user-type "small business owners"
 ```
+
+### With the MCP Server
+
+The `mcp-server/` directory contains a [Model Context Protocol](https://modelcontextprotocol.io) server that exposes every prompt as a callable tool inside Claude Desktop, Claude Code, Cursor, and any other MCP-compatible client.
+
+**Tools exposed:**
+
+| Tool | What it does |
+| --- | --- |
+| `list_prompts` | List all prompts, optionally filtered by category |
+| `get_categories` | List all categories with prompt counts |
+| `search_prompts` | Full-text search across titles, purposes, and content |
+| `get_prompt` | Return the raw markdown of a prompt |
+| `fill_prompt` | Fill placeholders and return a ready-to-use prompt |
+
+**Quick setup:**
+
+```bash
+cd mcp-server
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+Then add to `~/Library/Application Support/Claude/claude_desktop_config.json`:
+
+```json
+{
+  "mcpServers": {
+    "pm-prompts": {
+      "command": "/absolute/path/to/mcp-server/.venv/bin/python",
+      "args": ["/absolute/path/to/AI-Prompts-for-Product-Management/mcp-server/server.py"]
+    }
+  }
+}
+```
+
+Or connect via Claude Code CLI:
+
+```bash
+claude mcp add pm-prompts /absolute/path/to/mcp-server/.venv/bin/python /absolute/path/to/mcp-server/server.py
+```
+
+See [mcp-server/README.md](mcp-server/README.md) for the full setup guide, Claude Code integration, and an MCP tutorial.
 
 ## Prompt Engineering Principles
 
