@@ -2,24 +2,26 @@
 
 > A structured, version-controlled prompt library for Product Managers using GenAI across the product lifecycle.
 
-
 ## Overview
 
 This repo organizes proven PM prompts into a **Claude Code**–compatible skill structure. Each prompt is a standalone markdown template you can copy, customize, and run.
 
 ## Repository Structure
 
-```
+```text
 AI-Prompts-for-Product-Management/
 ├── SKILL.md                          # Skill entry point (for Claude Code)
 ├── README.md                         # This file
 ├── prompts/
 │   ├── architecture-diagrams/
 │   │   └── 01-sequence-diagram-from-repo.md
+│   ├── communications/
+│   │   └── 01-weekly-leadership-update.md
 │   ├── competitive-analysis/
 │   │   ├── 01-positioning-messaging.md
 │   │   ├── 02-feature-comparison.md
-│   │   └── 03-target-customers.md
+│   │   ├── 03-target-customers.md
+│   │   └── 04-capability-gap-analysis.md
 │   ├── customer-discovery/
 │   │   ├── 01-interview-guide.md
 │   │   ├── 02-blind-spot-detection.md
@@ -30,12 +32,15 @@ AI-Prompts-for-Product-Management/
 │   │   ├── 07-jtbd-analysis.md
 │   │   ├── 08-survey-open-ended.md
 │   │   ├── 09-survey-segment-comparison.md
-│   │   └── 10-multi-source-patterns.md
+│   │   ├── 10-multi-source-patterns.md
+│   │   └── 10-sentiment-analysis-in-workitems
 │   ├── idea-evaluation/
 │   │   ├── 01-rice-scoring.md
 │   │   ├── 02-pre-mortem.md
 │   │   ├── 03-assumption-mapping.md
-│   │   └── 04-validation-questions.md
+│   │   ├── 04-validation-questions.md
+│   │   ├── 05-kano-analysis.md
+│   │   └── 06-moscow-prioritization.md
 │   ├── ideation/
 │   │   ├── 01-problem-to-solution.md
 │   │   ├── 02-Ideation.md
@@ -53,6 +58,11 @@ AI-Prompts-for-Product-Management/
 │   │   └── 01-ui-prototype-spec.md
 │   ├── release-notes-generator/
 │   │   └── 01-release-notes-generator.md
+│   ├── stakeholder-management/
+│   │   └── 01-raci-stakeholder-map.md
+│   ├── strategy/
+│   │   ├── 01-product-strategy-canvas.md
+│   │   └── 02-team-okr-generator.md
 │   ├── synthetic-users/
 │   │   ├── 01-create-synthetic-user.md
 │   │   └── 02-interview-synthetic-user.md
@@ -76,15 +86,18 @@ AI-Prompts-for-Product-Management/
 ## Usage
 
 ### Direct copy-paste
+
 Open any prompt file, replace `[PLACEHOLDERS]` with your context, and paste into Claude, ChatGPT, or Gemini.
 
 ### With Claude Code
+
 ```bash
 # Claude Code will auto-detect the SKILL.md and offer these prompts contextually
 claude "Help me create an interview guide for my B2B SaaS product"
 ```
 
 ### With the helper script
+
 ```bash
 ./scripts/run-prompt.sh prompts/customer-discovery/01-interview-guide.md \
   --problem "onboarding friction for SMB users" \
@@ -161,4 +174,3 @@ See [mcp-server/README.md](mcp-server/README.md) for the full setup guide, Claud
 2. **Be specific** — Generic prompts produce generic outputs
 3. **Iterate** — Refine your prompt if the first result isn't right
 4. **Admit unknowns** — Tell the AI "I don't know this" rather than guessing
-
