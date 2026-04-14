@@ -19,19 +19,22 @@ mcp = FastMCP("PM Prompts")
 PROMPTS_DIR = Path(__file__).parent.parent / "prompts"
 
 CATEGORY_DESCRIPTIONS = {
-    "customer-discovery": "Interview guides, transcript analysis, JTBD, survey analysis, pattern finding",
-    "synthetic-users": "Creating and interviewing AI-generated personas",
-    "market-research": "Structured market analysis, cross-referencing sources",
-    "competitive-analysis": "Positioning, feature comparison, target customers",
-    "trend-analysis": "Feedback trend monitoring, industry trend identification",
+    "architecture-diagrams": "Sequence diagrams from code repositories",
+    "communications": "Executive updates, weekly leadership messages, stakeholder communications",
+    "competitive-analysis": "Positioning, feature comparison, target customers, capability gap analysis",
+    "customer-discovery": "Interview guides, transcript analysis, JTBD, survey analysis, sentiment analysis, pattern finding",
+    "idea-evaluation": "RICE scoring, pre-mortem, assumption mapping, validation questions, Kano analysis, MoSCoW prioritization",
     "ideation": "Problem-to-solution generation, SCAMPER, VRIO, MECE analysis",
-    "idea-evaluation": "RICE scoring, pre-mortem, assumption mapping, validation questions",
-    "prds": "Product Requirements Documents (Amazon 6-pager style)",
+    "market-research": "Structured market analysis, cross-referencing sources",
     "metrics": "Feature success metrics and measurement frameworks",
+    "prds": "Product Requirements Documents (Amazon 6-pager style)",
     "prototyping": "UI prototype specs",
     "release-notes-generator": "Generating release notes from commit history",
+    "stakeholder-management": "RACI matrix, stakeholder mapping, influence and support analysis",
+    "strategy": "Product strategy canvas, OKR generation and cascading",
+    "synthetic-users": "Creating and interviewing AI-generated personas",
+    "trend-analysis": "Feedback trend monitoring, industry trend identification",
     "user-journey-maps": "User journey mapping",
-    "architecture-diagrams": "Sequence diagrams from code repositories",
 }
 
 
@@ -117,7 +120,8 @@ def list_prompts(category: str = "") -> str:
                   'idea-evaluation', 'market-research', 'competitive-analysis',
                   'trend-analysis', 'synthetic-users', 'prds', 'metrics',
                   'prototyping', 'release-notes-generator', 'user-journey-maps',
-                  'architecture-diagrams'. Leave empty to list every prompt.
+                  'architecture-diagrams', 'communications', 'stakeholder-management',
+                  'strategy'. Leave empty to list every prompt.
 
     Returns:
         JSON array — each item has: id, title, phase, purpose, category.

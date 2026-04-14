@@ -1,157 +1,106 @@
 # PM Prompts MCP Server
 
-A [Model Context Protocol](https://modelcontextprotocol.io) server that exposes every prompt in this repository as callable tools inside Claude Desktop, Claude Code, Cursor, and any other MCP-compatible client.
+A [Model Context Protocol](https://modelcontextprotocol.io) server that exposes every prompt in this repository as callable tools inside Claude Desktop, Claude Code, GitHub Copilot, OpenAI Agents, and any other MCP-compatible client.
 
 ---
 
-## Tutorial: How This MCP Server Was Built
+## What This Server Does
 
-### What is MCP?
+Without MCP, using these prompts means browsing to a file, copying the template, filling in placeholders manually, and pasting into your AI tool.
 
-MCP (Model Context Protocol) is an open standard that lets AI assistants call external tools and resources at runtime. Instead of copy-pasting a prompt template from a file, the assistant calls a tool, gets the template back, and uses it directly in the conversation.
+With MCP, your AI assistant can:
 
-```
-You ─── ask Claude ─── Claude calls MCP tool ─── server reads .md file ─── returns prompt
-```
-
-Think of it as a typed API layer between Claude and your file system (or any other data source).
-
----
-
-### Why Build One for This Repo?
-
-Without MCP, using these prompts requires you to:
-1. Browse to the right file
-2. Copy the template
-3. Fill in the placeholders manually
-4. Paste into Claude
-
-With MCP, Claude can:
-- **discover** what prompts exist (`list_prompts`, `get_categories`)
-- **find** the right one for your task (`search_prompts`)
-- **retrieve** the full template (`get_prompt`)
-- **fill it** with your context and hand it back ready to run (`fill_prompt`)
+- **Discover** what prompts exist (`list_prompts`, `get_categories`)
+- **Find** the right one for your task (`search_prompts`)
+- **Retrieve** the full template (`get_prompt`)
+- **Fill it** with your context and hand it back ready to run (`fill_prompt`)
 
 All without leaving the conversation.
 
----
-
-### Anatomy of an MCP Server (Python)
-
-An MCP server has three parts:
-
-#### 1. The transport layer
-MCP servers communicate over **stdio** (default) or SSE. `FastMCP` from the
-`mcp` package handles this automatically — you never write transport code.
-
-```python
-from mcp.server.fastmcp import FastMCP
-mcp = FastMCP("PM Prompts")   # "PM Prompts" is the server name shown in the client
-```
-
-#### 2. Tools
-Tools are Python functions decorated with `@mcp.tool()`. The docstring becomes
-the tool description Claude uses to decide when to call it. Type annotations
-become the JSON Schema the client validates against.
-
-```python
-@mcp.tool()
-def list_prompts(category: str = "") -> str:
-    """
-    List all available PM prompt templates, optionally filtered by category.
-    ...
-    """
-    ...
-    return json.dumps(result)
-```
-
-Rules of thumb:
-- **Return strings.** Even structured data — serialize it with `json.dumps`.
-- **Write detailed docstrings.** Claude reads them to decide whether to call your tool.
-- **Keep each tool focused.** One tool = one job.
-
-#### 3. The entry point
-
-```python
-if __name__ == "__main__":
-    mcp.run()   # starts the stdio server
-```
-
-That's it. `mcp.run()` reads from stdin and writes to stdout in the MCP wire format.
-
----
-
-### Design Decisions for This Server
-
-| Decision | Rationale |
-|---|---|
-| Parse files at startup, not per-call | Prompts are static; parsing once is faster |
-| Expose 5 focused tools | `list`, `search`, `get_categories`, `get_prompt`, `fill_prompt` — each does one thing |
-| Partial-match fallback in `_find_prompt` | Forgiving — "interview guide" works, not just the exact ID |
-| Bracket notation optional in `fill_prompt` | `"PROBLEM"` and `"[PROBLEM]"` both work |
-| Return markdown from `fill_prompt` | Claude can render it nicely back to the user |
-
----
-
-### Tool Reference
+### Tools Exposed
 
 | Tool | What it does | Key args |
 |---|---|---|
-| `list_prompts` | List all prompts (or filter by category) | `category` (optional) |
-| `get_categories` | List all categories with counts | — |
-| `search_prompts` | Full-text search across titles, purposes, content | `query` |
+| `list_prompts` | List all prompts, optionally filtered by category | `category` (optional) |
+| `get_categories` | List all categories with counts and descriptions | — |
+| `search_prompts` | Full-text search across titles, purposes, and content | `query` |
 | `get_prompt` | Return the raw markdown of a prompt | `prompt_id` |
 | `fill_prompt` | Fill placeholders and return a ready-to-use prompt | `prompt_id`, `variables` dict |
 
 ---
 
+## Prerequisites
+
+- **Python 3.10 or later** — check with `python3 --version`
+- One of:
+  - **venv** (built into Python, no install needed)
+  - **uv** (faster alternative — install with `curl -LsSf https://astral.sh/uv/install.sh | sh`)
+
+---
+
 ## Setup
 
-### 1. Create and activate a virtual environment
+Choose **one** of the two environment options below. Both work identically at runtime — `uv` is faster to install and requires no manual activation step.
+
+### Option A — venv (standard Python)
 
 ```bash
 cd mcp-server
 python3 -m venv .venv
-source .venv/bin/activate   # macOS / Linux
-# .venv\Scripts\activate    # Windows
-```
-
-Your prompt will change to `(.venv)` confirming the environment is active.
-
-### 2. Install the dependency
-
-```bash
+source .venv/bin/activate        # macOS / Linux
+# .venv\Scripts\activate         # Windows
 pip install -r requirements.txt
 ```
 
-Or with `uv` (faster, no venv needed — it manages isolation automatically):
+Your shell prompt changes to `(.venv)` confirming the environment is active.
+
+To get the absolute path to the Python binary (needed for client configs below):
 
 ```bash
+which python          # macOS / Linux — copy this path
+```
+
+### Option B — uv (recommended)
+
+```bash
+cd mcp-server
+uv venv
 uv pip install -r requirements.txt
 ```
 
-### 3. Test it locally
+With `uv`, you reference the server using `uv run` in client configs — no activation step needed.
+
+---
+
+## Test the Server Locally
+
+### Quick smoke test
 
 ```bash
+# venv
 python server.py
+
+# uv
+uv run python server.py
 ```
 
-The server waits for MCP messages on stdin. You won't see output until a client connects — that's normal.
+The server waits silently for MCP messages on stdin — that is expected behavior. Press `Ctrl+C` to exit.
 
-You can also use the MCP inspector:
+### Interactive browser UI (MCP Inspector)
 
 ```bash
 npx @modelcontextprotocol/inspector python mcp-server/server.py
 ```
 
-This opens a browser UI where you can call every tool interactively.
+This opens a browser UI at `localhost:5173` where you can call every tool interactively and inspect the JSON responses.
 
 ---
 
 ## Connect to Claude Desktop
 
-Add this block to `~/Library/Application Support/Claude/claude_desktop_config.json`
-(create the file if it doesn't exist):
+Edit `~/Library/Application Support/Claude/claude_desktop_config.json` (create the file if it does not exist). Add the `pm-prompts` block inside `mcpServers`.
+
+With **venv** — point `command` at the venv Python binary so Claude Desktop uses the environment where `mcp` is installed:
 
 ```json
 {
@@ -164,9 +113,7 @@ Add this block to `~/Library/Application Support/Claude/claude_desktop_config.js
 }
 ```
 
-Point `command` at the **venv's Python binary** (`mcp-server/.venv/bin/python`) so Claude Desktop uses the environment where `mcp` is installed. Replace both paths with the actual absolute paths on your machine, then restart Claude Desktop.
-
-**Using `uv` (recommended for isolation):**
+With **uv** — no venv activation needed, `uv run` handles the environment automatically:
 
 ```json
 {
@@ -177,22 +124,32 @@ Point `command` at the **venv's Python binary** (`mcp-server/.venv/bin/python`) 
         "run",
         "--with", "mcp[cli]",
         "python",
-        "/absolute/path/to/mcp-server/server.py"
+        "/absolute/path/to/AI-Prompts-for-Product-Management/mcp-server/server.py"
       ]
     }
   }
 }
 ```
 
+After saving, **restart Claude Desktop**. A hammer icon in the chat input confirms MCP tools are loaded.
+
 ---
 
 ## Connect to Claude Code (CLI)
 
+### One-line setup
+
 ```bash
+# venv
 claude mcp add pm-prompts /absolute/path/to/mcp-server/.venv/bin/python /absolute/path/to/mcp-server/server.py
+
+# uv
+claude mcp add pm-prompts uv -- run --with mcp[cli] python /absolute/path/to/mcp-server/server.py
 ```
 
-Or add it to your project's `.claude/settings.json`:
+### Project-scoped config (`.claude/settings.json`)
+
+Add this to `.claude/settings.json` in the repo root so the server is available to anyone who clones the repo:
 
 ```json
 {
@@ -205,7 +162,25 @@ Or add it to your project's `.claude/settings.json`:
 }
 ```
 
-Then in a Claude Code session, the tools appear automatically. You can verify with:
+Or with `uv`:
+
+```json
+{
+  "mcpServers": {
+    "pm-prompts": {
+      "command": "uv",
+      "args": [
+        "run",
+        "--with", "mcp[cli]",
+        "python",
+        "./mcp-server/server.py"
+      ]
+    }
+  }
+}
+```
+
+Verify the tools are live inside a Claude Code session:
 
 ```
 /mcp
@@ -213,36 +188,210 @@ Then in a Claude Code session, the tools appear automatically. You can verify wi
 
 ---
 
+## Connect to GitHub Copilot (VS Code)
+
+Create `.vscode/mcp.json` in the repo root (or open the Command Palette → **MCP: Open User Configuration** for a global config shared across all workspaces).
+
+With **venv**:
+
+```json
+{
+  "servers": {
+    "pm-prompts": {
+      "type": "stdio",
+      "command": "/absolute/path/to/mcp-server/.venv/bin/python",
+      "args": ["/absolute/path/to/AI-Prompts-for-Product-Management/mcp-server/server.py"]
+    }
+  }
+}
+```
+
+With **uv**:
+
+```json
+{
+  "servers": {
+    "pm-prompts": {
+      "type": "stdio",
+      "command": "uv",
+      "args": [
+        "run",
+        "--with", "mcp[cli]",
+        "python",
+        "/absolute/path/to/AI-Prompts-for-Product-Management/mcp-server/server.py"
+      ]
+    }
+  }
+}
+```
+
+> **Note:** VS Code uses `"servers"` as the root key, not `"mcpServers"`.
+
+After saving, open Copilot Chat and switch to **Agent** mode — MCP tools are only available in Agent mode, not Chat mode. Click the **Tools** icon in the chat input to confirm `list_prompts`, `search_prompts`, `fill_prompt`, and others appear in the list.
+
+---
+
+## Connect to OpenAI (Agents SDK)
+
+The [OpenAI Agents SDK](https://openai.github.io/openai-agents-python/) supports MCP servers natively via `MCPServerStdio`.
+
+### Install the SDK
+
+```bash
+# venv
+pip install openai-agents
+
+# uv
+uv add openai-agents
+```
+
+### Example agent script
+
+```python
+import asyncio
+from agents import Agent, Runner
+from agents.mcp import MCPServerStdio
+
+async def main():
+    server = MCPServerStdio(
+        command="python",                          # or "uv"
+        args=["/absolute/path/to/mcp-server/server.py"],
+        # If using uv:
+        # args=["run", "--with", "mcp[cli]", "python", "/absolute/path/to/mcp-server/server.py"]
+    )
+
+    async with server:
+        agent = Agent(
+            name="PM Assistant",
+            instructions="You are a product management assistant. Use the pm-prompts tools to find and fill prompt templates when the user needs help with PM tasks.",
+            mcp_servers=[server],
+        )
+        result = await Runner.run(
+            agent,
+            "Find me the best prompt for running a Kano analysis on a new feature set."
+        )
+        print(result.final_output)
+
+asyncio.run(main())
+```
+
+### OpenAI Responses API (remote MCP)
+
+The OpenAI Responses API supports **remote** MCP servers over HTTPS. To use this server with the Responses API, expose it over SSE using a proxy:
+
+```bash
+pip install mcp-proxy
+mcp-proxy --port 8000 python mcp-server/server.py
+```
+
+Then reference it in your API call:
+
+```python
+from openai import OpenAI
+
+client = OpenAI()
+response = client.responses.create(
+    model="gpt-4o",
+    tools=[{
+        "type": "mcp",
+        "server_url": "http://localhost:8000/sse",
+        "server_label": "pm-prompts"
+    }],
+    input="Find and fill the OKR generator prompt for a growth team."
+)
+```
+
+---
+
 ## Example Conversations
 
-Once connected, you can talk to Claude naturally:
+Once connected, talk to your AI assistant naturally — it will call the right tools automatically.
 
 > "I need to do customer discovery for a B2B invoicing tool. Find the right prompt and fill it in for me."
 
-Claude will call `search_prompts("customer discovery")`, then `fill_prompt("customer-discovery/01-interview-guide", {...})` and return the ready-to-use prompt.
+The assistant calls `search_prompts("customer discovery")`, then `fill_prompt("customer-discovery/01-interview-guide", {...})` and returns a ready-to-use prompt.
 
-> "What PM prompts do you have for evaluating ideas?"
+> "What prompts do you have for evaluating ideas?"
 
-Claude calls `list_prompts("idea-evaluation")` and lists RICE scoring, pre-mortem, assumption mapping, and validation questions.
+Calls `list_prompts("idea-evaluation")` and lists RICE scoring, pre-mortem, assumption mapping, validation questions, Kano analysis, and MoSCoW prioritization.
 
-> "Show me the PRD template."
+> "Help me build team OKRs from our company OKRs."
 
-Claude calls `get_prompt("prds/01-prd-generation")` and returns the full Amazon 6-pager template.
+Calls `get_prompt("strategy/02-team-okr-generator")` and walks you through the inputs.
+
+> "I need to send a weekly update to my VP. Generate the message."
+
+Calls `fill_prompt("communications/01-weekly-leadership-update", {...})` with your week's notes and returns a formatted Teams/Slack message.
+
+> "Build a RACI matrix for my upcoming platform migration."
+
+Calls `fill_prompt("stakeholder-management/01-raci-stakeholder-map", {...})` and returns a full stakeholder map and engagement strategy.
 
 ---
 
 ## Extending the Server
 
-To add a new tool, add a decorated function to `server.py`:
+### Add a new tool
 
 ```python
 @mcp.tool()
 def export_prompt_as_notion(prompt_id: str) -> str:
-    """Export a filled prompt to Notion-compatible markdown."""
+    """Export a filled prompt formatted for Notion."""
     prompt = _find_prompt(prompt_id)
     # ... your logic
     return result
 ```
 
-To support a new prompt category, just add a new folder and `.md` files under
-`prompts/` — the server discovers them automatically at startup.
+### Add a new prompt category
+
+Add a new folder and `.md` files under `prompts/` — the server discovers them automatically at startup via `rglob("*.md")`. Then add the new category slug and description to `CATEGORY_DESCRIPTIONS` in `server.py`.
+
+---
+
+## How This Server Was Built
+
+### What is MCP?
+
+MCP (Model Context Protocol) is an open standard that lets AI assistants call external tools at runtime. Think of it as a typed API layer between the assistant and your data sources.
+
+```
+You ─── ask AI ─── AI calls MCP tool ─── server reads .md file ─── returns prompt
+```
+
+### Anatomy of an MCP Server (Python)
+
+An MCP server has three parts:
+
+**1. The transport layer** — `FastMCP` handles stdio transport automatically:
+
+```python
+from mcp.server.fastmcp import FastMCP
+mcp = FastMCP("PM Prompts")
+```
+
+**2. Tools** — Python functions decorated with `@mcp.tool()`. The docstring is what the AI reads to decide when to call the tool:
+
+```python
+@mcp.tool()
+def list_prompts(category: str = "") -> str:
+    """List all available PM prompt templates, optionally filtered by category."""
+    ...
+    return json.dumps(result)
+```
+
+**3. The entry point:**
+
+```python
+if __name__ == "__main__":
+    mcp.run()
+```
+
+### Design Decisions
+
+| Decision | Rationale |
+| --- | --- |
+| Parse files at startup, not per-call | Prompts are static; parsing once is faster |
+| 5 focused tools | Each does one job — list, search, categorize, get, fill |
+| Partial-match fallback in `_find_prompt` | "interview guide" works, not just the exact file ID |
+| Bracket notation optional in `fill_prompt` | `"PROBLEM"` and `"[PROBLEM]"` both resolve correctly |
+| Return markdown from `fill_prompt` | Renders cleanly in Claude, Copilot, and most AI clients |
