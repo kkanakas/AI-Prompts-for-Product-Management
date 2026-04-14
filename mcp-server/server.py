@@ -30,7 +30,7 @@ CATEGORY_DESCRIPTIONS = {
     "prds": "Product Requirements Documents (Amazon 6-pager style)",
     "prototyping": "UI prototype specs",
     "release-notes-generator": "Generating release notes from commit history",
-    "stakeholder-management": "RACI matrix, stakeholder mapping, influence and support analysis",
+    "stakeholder-management": "RACI matrix, DACI decision framework, stakeholder mapping, influence and support analysis",
     "strategy": "Product strategy canvas, OKR generation and cascading",
     "synthetic-users": "Creating and interviewing AI-generated personas",
     "trend-analysis": "Feedback trend monitoring, industry trend identification",

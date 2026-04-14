@@ -307,25 +307,71 @@ response = client.responses.create(
 
 Once connected, talk to your AI assistant naturally — it will call the right tools automatically.
 
+### Customer Discovery
+
 > "I need to do customer discovery for a B2B invoicing tool. Find the right prompt and fill it in for me."
 
-The assistant calls `search_prompts("customer discovery")`, then `fill_prompt("customer-discovery/01-interview-guide", {...})` and returns a ready-to-use prompt.
+Calls `search_prompts("customer discovery")`, then `fill_prompt("customer-discovery/01-interview-guide", {"[PROBLEM]": "invoicing friction for SMB owners", "[USER TYPE]": "freelancers and small business owners"})` and returns a ready-to-use interview guide.
+
+> "Analyse the sentiment in these Jira issues and tell me where the team is struggling."
+
+Calls `get_prompt("customer-discovery/10-sentiment-analysis-in-workitems")` and returns the structured sentiment analysis template — paste your Jira export directly into the prompt.
+
+### Competitive Analysis
+
+> "Run a capability gap analysis between us and our top three competitors."
+
+Calls `fill_prompt("competitive-analysis/04-capability-gap-analysis", {"[PRODUCT NAME]": "...", "[TARGET CUSTOMER]": "...", "[LIST YOUR CURRENT CAPABILITIES]": "..."})` and returns a full gap matrix with Critical, Opportunity, Parity, and Differentiator classifications.
+
+> "What positioning prompts do you have?"
+
+Calls `list_prompts("competitive-analysis")` and lists positioning & messaging, feature comparison, target customers, and capability gap analysis.
+
+### Idea Evaluation & Prioritization
 
 > "What prompts do you have for evaluating ideas?"
 
 Calls `list_prompts("idea-evaluation")` and lists RICE scoring, pre-mortem, assumption mapping, validation questions, Kano analysis, and MoSCoW prioritization.
 
-> "Help me build team OKRs from our company OKRs."
+> "Run a Kano analysis on these eight features I'm considering for our Q3 release."
 
-Calls `get_prompt("strategy/02-team-okr-generator")` and walks you through the inputs.
+Calls `fill_prompt("idea-evaluation/05-kano-analysis", {"[PRODUCT NAME]": "...", "[FEATURE 1]": "...", ...})` and returns each feature classified as Basic, Performance, Delighter, Indifferent, or Reverse — with an investment priority tier list.
 
-> "I need to send a weekly update to my VP. Generate the message."
+> "Help my team prioritize these capabilities for the next sprint using MoSCoW."
 
-Calls `fill_prompt("communications/01-weekly-leadership-update", {...})` with your week's notes and returns a formatted Teams/Slack message.
+Calls `fill_prompt("idea-evaluation/06-moscow-prioritization", {"[INITIATIVE OR RELEASE SCOPE]": "Q3 sprint", "[CAPABILITY 1]": "...", "[GOAL OF THIS INITIATIVE]": "...", "[CONSTRAINTS]": "6-week window, 3 engineers"})` and returns a full MoSCoW table, scope health check, and team alignment talking points.
+
+### Stakeholder Management
 
 > "Build a RACI matrix for my upcoming platform migration."
 
-Calls `fill_prompt("stakeholder-management/01-raci-stakeholder-map", {...})` and returns a full stakeholder map and engagement strategy.
+Calls `fill_prompt("stakeholder-management/01-raci-stakeholder-map", {"[INITIATIVE]": "Platform migration", "[LIST STAKEHOLDERS]": "Sarah — VP Eng; James — Head of Sales; ..."})` and returns a RACI table, influence and support matrix, engagement strategy, and risk flags.
+
+### Communications
+
+> "I need to send a weekly update to my VP. Here are my rough notes for the week."
+
+Calls `fill_prompt("communications/01-weekly-leadership-update", {"[AUDIENCE]": "VP of Product", "[PRODUCT OR INITIATIVE NAME]": "...", "[DATE]": "...", "[BULLET LIST — completed]": "..."})` and returns a formatted Teams or Slack message under 250 words, ready to send.
+
+### Strategy
+
+> "Help me build a product strategy canvas for our new enterprise tier."
+
+Calls `fill_prompt("strategy/01-product-strategy-canvas", {"[PRODUCT NAME]": "...", "[TARGET CUSTOMER]": "Enterprise IT teams", "[PROBLEM WE ARE SOLVING]": "...", "[12-MONTH GOAL]": "..."})` and returns a nine-section canvas including vision, value proposition, competitive positioning map, strategic bets, and OKRs.
+
+> "Help me build team OKRs that cascade from our company OKRs."
+
+Calls `fill_prompt("strategy/02-team-okr-generator", {"[COMPANY OKRS]": "O1: Grow ARR to $12M. KR1: ...", "[TEAM NAME]": "Growth Team", "[BASELINE METRICS]": "activation rate: 38%"})` and returns 2–3 well-formed Objectives with Key Results, an OKR health check flagging any activity KRs or missing baselines, and a ready-to-send team announcement.
+
+### Browsing and Discovery
+
+> "What categories of PM prompts do you have?"
+
+Calls `get_categories()` and lists all 16 categories with prompt counts and descriptions — from customer discovery and competitive analysis to strategy, stakeholder management, and communications.
+
+> "Show me everything in the strategy category."
+
+Calls `list_prompts("strategy")` and returns the product strategy canvas and team OKR generator with IDs, phases, and purposes.
 
 ---
 
