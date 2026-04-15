@@ -92,6 +92,7 @@ Build a rigorous picture of your market and validate your assumptions.
 | --- | --- |
 | `01-structured-market-analysis` | Systematic analysis of market size, dynamics, and trends |
 | `02-evidence-and-contradictions` | Surface evidence that supports and contradicts your market thesis |
+| `03-comprehensive-market-landscape` | C-suite-ready landscape covering trends, SWOT, PESTLE, and information gaps from public sources |
 
 ### Metrics
 
@@ -238,7 +239,8 @@ AI-Prompts-for-Product-Management/
 │   │   └── 05-mece-analysis.md
 │   ├── market-research/
 │   │   ├── 01-structured-market-analysis.md
-│   │   └── 02-evidence-and-contradictions.md
+│   │   ├── 02-evidence-and-contradictions.md
+│   │   └── 03-comprehensive-market-landscape.md
 │   ├── metrics/
 │   │   └── 01-feature-success-metrics.md
 │   ├── prds/
