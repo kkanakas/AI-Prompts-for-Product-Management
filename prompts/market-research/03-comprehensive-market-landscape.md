@@ -79,7 +79,7 @@ List every source category referenced, what it contributed to the analysis, and 
 | Variable | Description | Example |
 |---|---|---|
 | `[INDUSTRY SECTOR]` | The broad industry your company operates in | "Software and Information Technology — cybersecurity" |
-| `[KEY VENDORS]` | Major vendors whose public documentation should be mined | "Microsoft, AWS, CrowdStrike, Palo Alto Networks" |
+| `[KEY VENDORS]` | Major vendors whose public documentation should be mined | "Microsoft, AWS, GCP,Others" |
 | `[COMPANY OR FEATURE DESCRIPTION]` | What you are analyzing — include what it does, who it serves, and the problem it solves | "Acme Endpoint Shield — an endpoint detection and response platform for mid-market enterprises that reduces mean time to remediate from days to minutes" |
 | `[LIST COMPETITORS]` | Named competitors to benchmark against; leave blank to let the AI select the top 3–5 | "CrowdStrike Falcon, Microsoft Defender for Endpoint, SentinelOne Singularity" |
 | `[MARKET SEGMENT]` | The specific segment or use case to focus the analysis on | "endpoint detection and response (EDR)" |
