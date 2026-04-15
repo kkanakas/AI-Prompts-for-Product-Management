@@ -195,8 +195,12 @@ Worked examples showing filled-in prompts and generated outputs — useful for u
 
 ```text
 AI-Prompts-for-Product-Management/
-├── SKILL.md                          # Skill entry point (for Claude Code)
+├── SKILL.md                          # Skill definition (root copy)
 ├── README.md                         # This file
+├── .claude/
+│   └── skills/
+│       └── ai-pm-prompts/
+│           └── SKILL.md             # Project-scoped skill (auto-loaded by Claude Code)
 ├── prompts/
 │   ├── architecture-diagrams/
 │   │   └── 01-sequence-diagram-from-repo.md
@@ -284,31 +288,20 @@ AI-Prompts-for-Product-Management/
 
 ### Install as a Claude Code Skill
 
-The `SKILL.md` file at the repo root registers this library as a skill inside Claude Code. Once in place, Claude Code automatically discovers it and knows when to suggest and fill prompts based on your requests.
+The skill is already installed for project-scoped use — `.claude/skills/ai-pm-prompts/SKILL.md` is included in this repo. When you open this directory in Claude Code, the skill is detected automatically with no setup required.
 
-Skills are discovered automatically — no CLI command is needed. There are two scopes:
+Skills are discovered automatically from the `.claude/skills/` directory — no CLI command is needed.
 
-**Project-scoped (available in this repo only):**
+**To make the skill available globally across all your projects:**
 
-Copy or symlink the skill into the project's `.claude/skills/` directory:
-
-```bash
-mkdir -p .claude/skills/ai-pm-prompts
-cp SKILL.md .claude/skills/ai-pm-prompts/SKILL.md
-```
-
-Claude Code will detect it the next time you start a session in this directory.
-
-**Global (available in every project):**
-
-Copy the skill into your personal Claude skills directory:
+Copy it into your personal Claude skills directory:
 
 ```bash
 mkdir -p ~/.claude/skills/ai-pm-prompts
-cp SKILL.md ~/.claude/skills/ai-pm-prompts/SKILL.md
+cp .claude/skills/ai-pm-prompts/SKILL.md ~/.claude/skills/ai-pm-prompts/SKILL.md
 ```
 
-Once copied, Claude Code loads it automatically across all sessions — no restart required.
+Claude Code loads it automatically from that point forward — no restart required.
 
 **Use it naturally:**
 
