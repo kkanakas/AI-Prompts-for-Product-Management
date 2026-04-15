@@ -1,0 +1,51 @@
+---
+description: >-
+  Use when a PM needs help with customer discovery, interview guides, research
+  synthesis, competitive analysis, gap analysis, SWOT, market research, trend
+  analysis, ideation, pre-mortem, RICE scoring, Kano analysis, MoSCoW
+  prioritization, synthetic users, problem statements, JTBD, stakeholder
+  mapping, RACI, DACI, decision frameworks, product strategy canvas, OKRs,
+  weekly leadership updates, sentiment analysis, PRDs, user journey maps,
+  release notes, prototyping, or any product management task.
+globs: prompts/**/*.md
+alwaysApply: false
+---
+
+# AI Prompts for Product Managers
+
+This repo is a structured prompt library for PMs. Every prompt lives in `prompts/<category>/` and follows the same format: Context → Inputs → Outputs.
+
+## How to use a prompt
+
+1. Identify the right prompt from the catalog below
+2. Read the prompt file to get the full template
+3. Fill in `[PLACEHOLDERS]` with the user's specific context
+4. Return the filled prompt ready to run
+
+## Prompt Catalog
+
+| Category | Directory | When to use |
+|---|---|---|
+| Architecture Diagrams | `prompts/architecture-diagrams/` | Sequence diagrams from code |
+| Communications | `prompts/communications/` | Weekly leadership updates for Teams/Slack |
+| Competitive Analysis | `prompts/competitive-analysis/` | Positioning, feature comparison, capability gaps |
+| Customer Discovery | `prompts/customer-discovery/` | Interview guides, transcripts, JTBD, surveys, sentiment |
+| Idea Evaluation | `prompts/idea-evaluation/` | RICE, pre-mortem, Kano, MoSCoW |
+| Ideation | `prompts/ideation/` | Problem-to-solution, SCAMPER, VRIO, MECE |
+| Market Research | `prompts/market-research/` | Market analysis, evidence checks, landscape reports |
+| Metrics | `prompts/metrics/` | Feature success metrics |
+| PRDs | `prompts/prds/` | Product requirements documents |
+| Prototyping | `prompts/prototyping/` | UI prototype specs |
+| Release Notes | `prompts/release-notes-generator/` | Release notes from git history |
+| Stakeholder Management | `prompts/stakeholder-management/` | RACI, DACI, stakeholder mapping |
+| Strategy | `prompts/strategy/` | Product strategy canvas, team OKRs |
+| Synthetic Users | `prompts/synthetic-users/` | AI-generated personas and interviews |
+| Trend Analysis | `prompts/trend-analysis/` | Feedback and industry trend monitoring |
+| User Journey Maps | `prompts/user-journey-maps/` | End-to-end journey mapping |
+
+## When the user asks for PM help
+
+1. Match their request to the right category and prompt file
+2. Read the prompt file with the Read tool
+3. Ask for any missing placeholder values you cannot infer
+4. Return the completed prompt with all placeholders filled
