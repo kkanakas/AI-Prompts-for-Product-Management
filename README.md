@@ -202,6 +202,9 @@ AI-Prompts-for-Product-Management/
 │   └── skills/
 │       └── ai-pm-prompts/
 │           └── SKILL.md             # Project-scoped skill (auto-loaded by Claude Code)
+├── .cursor/
+│   └── rules/
+│       └── pm-prompts.mdc          # Cursor rule (auto-detected)
 ├── prompts/
 │   ├── architecture-diagrams/
 │   │   └── 01-sequence-diagram-from-repo.md
@@ -340,6 +343,37 @@ zip -r ai-pm-prompts.zip SKILL.md prompts/ examples/
 The skill will now appear in Claude Desktop and will be suggested automatically when you ask about customer discovery, prioritization, stakeholder mapping, OKRs, strategy, or any other PM task covered by the library.
 
 > **Note:** Code execution must be enabled in Claude Desktop settings for skills to function. For Team or Enterprise plans, your organisation owner must enable "Code execution and file creation" and "Skills" before custom skills can be uploaded.
+
+---
+
+### Install in Cursor
+
+Cursor uses **rules** (`.mdc` files in `.cursor/rules/`) instead of skills. This repo ships with a pre-built rule that teaches Cursor's AI agent the full prompt catalog.
+
+**Project-scoped (automatic) — no setup required:**
+
+The rule file is already included at `.cursor/rules/pm-prompts.mdc`. When you open this repo in Cursor, it is detected automatically. Just start a conversation:
+
+```text
+"Help me run a RICE scoring session for these five features"
+"Create a competitive gap analysis against Datadog and Splunk"
+"Build a PESTLE analysis for our European expansion"
+```
+
+Cursor reads the rule's description and trigger phrases to decide when to activate it, then finds the right prompt template, fills in your context, and returns a ready-to-use prompt.
+
+**Global (available across all your projects):**
+
+Copy the rule into your personal Cursor rules directory so it works in every workspace:
+
+```bash
+mkdir -p ~/.cursor/rules
+cp .cursor/rules/pm-prompts.mdc ~/.cursor/rules/pm-prompts.mdc
+```
+
+Cursor loads global rules automatically — no restart required.
+
+> **How Cursor rules differ from Claude Code skills:** Claude Code uses `SKILL.md` with YAML frontmatter; Cursor uses `.mdc` files with `description`, `globs`, and `alwaysApply` fields. Both achieve the same goal — giving the AI agent persistent context about when and how to use this prompt library.
 
 ---
 
