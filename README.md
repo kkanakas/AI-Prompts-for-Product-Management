@@ -284,42 +284,67 @@ AI-Prompts-for-Product-Management/
 
 ### Install as a Claude Code Skill
 
-The `SKILL.md` file registers this entire library as a skill inside Claude Code. Once installed, Claude Code knows every prompt exists, when to suggest it, and can fill it with your context automatically.
+The `SKILL.md` file at the repo root registers this library as a skill inside Claude Code. Once in place, Claude Code automatically discovers it and knows when to suggest and fill prompts based on your requests.
 
-**Step 1 — Add the skill to Claude Code:**
+Skills are discovered automatically — no CLI command is needed. There are two scopes:
 
-```bash
-# From inside the repo directory
-claude skill add .
-```
+**Project-scoped (available in this repo only):**
 
-Or add it globally so it is available in every Claude Code session:
+Copy or symlink the skill into the project's `.claude/skills/` directory:
 
 ```bash
-claude skill add /absolute/path/to/AI-Prompts-for-Product-Management
+mkdir -p .claude/skills/ai-pm-prompts
+cp SKILL.md .claude/skills/ai-pm-prompts/SKILL.md
 ```
 
-**Step 2 — Verify it is loaded:**
+Claude Code will detect it the next time you start a session in this directory.
+
+**Global (available in every project):**
+
+Copy the skill into your personal Claude skills directory:
 
 ```bash
-claude skills
-# Should list: ai-pm-prompts
+mkdir -p ~/.claude/skills/ai-pm-prompts
+cp SKILL.md ~/.claude/skills/ai-pm-prompts/SKILL.md
 ```
 
-**Step 3 — Use it naturally:**
+Once copied, Claude Code loads it automatically across all sessions — no restart required.
+
+**Use it naturally:**
+
+```text
+"Help me run a Kano analysis on these eight features"
+"Create a DACI for our mobile strategy decision"
+"Build team OKRs from our company OKRs"
+"Write a weekly leadership update for my VP"
+```
+
+Claude Code reads the `SKILL.md` description and trigger phrases to decide when to activate the skill, then guides you through filling the relevant prompt with your context.
+
+---
+
+### Install in Claude Desktop
+
+Claude Desktop installs skills via a ZIP upload through the UI.
+
+**Step 1 — Create the skill ZIP:**
 
 ```bash
-claude "Help me run a Kano analysis on these eight features"
-claude "Create a DACI for our mobile strategy decision"
-claude "Build team OKRs from our company OKRs"
-claude "Write a weekly leadership update for my VP"
+zip -r ai-pm-prompts.zip SKILL.md prompts/ examples/
 ```
 
-Claude Code reads `SKILL.md` to understand what prompts are available, triggers the right one based on your request, and fills the placeholders with your context.
+**Step 2 — Upload the skill:**
 
-**Install in Claude Desktop:**
+1. Open Claude Desktop
+2. Go to **Customize → Skills**
+3. Click the **+** button → **Create skill**
+4. Select **Upload a skill**
+5. Upload `ai-pm-prompts.zip`
+6. Toggle the skill **on**
 
-Open Claude Desktop → Settings → Skills → Add Skill → point to this directory. The skill appears in the skills panel and Claude Desktop will surface relevant prompts as you work.
+The skill will now appear in Claude Desktop and will be suggested automatically when you ask about customer discovery, prioritization, stakeholder mapping, OKRs, strategy, or any other PM task covered by the library.
+
+> **Note:** Code execution must be enabled in Claude Desktop settings for skills to function. For Team or Enterprise plans, your organisation owner must enable "Code execution and file creation" and "Skills" before custom skills can be uploaded.
 
 ---
 
