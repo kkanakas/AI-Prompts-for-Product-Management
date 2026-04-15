@@ -282,6 +282,47 @@ AI-Prompts-for-Product-Management/
 
 ## Usage
 
+### Install as a Claude Code Skill
+
+The `SKILL.md` file registers this entire library as a skill inside Claude Code. Once installed, Claude Code knows every prompt exists, when to suggest it, and can fill it with your context automatically.
+
+**Step 1 — Add the skill to Claude Code:**
+
+```bash
+# From inside the repo directory
+claude skill add .
+```
+
+Or add it globally so it is available in every Claude Code session:
+
+```bash
+claude skill add /absolute/path/to/AI-Prompts-for-Product-Management
+```
+
+**Step 2 — Verify it is loaded:**
+
+```bash
+claude skills
+# Should list: ai-pm-prompts
+```
+
+**Step 3 — Use it naturally:**
+
+```bash
+claude "Help me run a Kano analysis on these eight features"
+claude "Create a DACI for our mobile strategy decision"
+claude "Build team OKRs from our company OKRs"
+claude "Write a weekly leadership update for my VP"
+```
+
+Claude Code reads `SKILL.md` to understand what prompts are available, triggers the right one based on your request, and fills the placeholders with your context.
+
+**Install in Claude Desktop:**
+
+Open Claude Desktop → Settings → Skills → Add Skill → point to this directory. The skill appears in the skills panel and Claude Desktop will surface relevant prompts as you work.
+
+---
+
 ### Direct copy-paste
 
 Open any prompt file, replace `[PLACEHOLDERS]` with your context, and paste into Claude, ChatGPT, Gemini, or Copilot.
