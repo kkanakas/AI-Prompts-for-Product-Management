@@ -31,7 +31,7 @@ CATEGORY_DESCRIPTIONS = {
     "prototyping": "UI prototype specs",
     "release-notes-generator": "Generating release notes from commit history",
     "stakeholder-management": "RACI matrix, DACI decision framework, stakeholder mapping, influence and support analysis",
-    "strategy": "Product strategy canvas, OKR generation and cascading",
+    "strategy": "Product strategy canvas, OKR generation and cascading, working backwards planning, Amazon PR/FAQ",
     "synthetic-users": "Creating and interviewing AI-generated personas",
     "trend-analysis": "Feedback trend monitoring, industry trend identification",
     "user-journey-maps": "User journey mapping",

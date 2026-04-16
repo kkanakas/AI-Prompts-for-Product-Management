@@ -143,6 +143,8 @@ Set direction, communicate it clearly, and cascade it to your team.
 | --- | --- |
 | `01-product-strategy-canvas` | Build a nine-section strategy canvas covering vision, value proposition, competitive positioning, strategic bets, and success metrics |
 | `02-team-okr-generator` | Cascade company OKRs into well-formed, measurable team OKRs with a health check and team communication draft |
+| `03-working-backwards` | Write a working backwards plan — internal press release, customer FAQs, value statement, and success metrics — anchored in customer outcome before any build begins |
+| `04-amazon-pr-faq` | Write a full Amazon-style Press Release and FAQ document — the discipline of announcing a finished product before building it, to force clarity on customer value before any code is written |
 
 ### Synthetic Users
 
@@ -189,6 +191,8 @@ Worked examples showing filled-in prompts and generated outputs — useful for u
 | [product-strategy-canvas-example](examples/product-strategy-canvas-example.md) | `strategy/01-product-strategy-canvas` |
 | [team-okr-generator-example](examples/team-okr-generator-example.md) | `strategy/02-team-okr-generator` |
 | [daci-decision-framework-example](examples/daci-decision-framework-example.md) | `stakeholder-management/02-daci-decision-framework` |
+| [working-backwards-example](examples/working-backwards-example.md) | `strategy/03-working-backwards` |
+| [amazon-pr-faq-example](examples/amazon-pr-faq-example.md) | `strategy/04-amazon-pr-faq` |
 
 ---
 
@@ -257,7 +261,9 @@ AI-Prompts-for-Product-Management/
 │   │   └── 02-daci-decision-framework.md
 │   ├── strategy/
 │   │   ├── 01-product-strategy-canvas.md
-│   │   └── 02-team-okr-generator.md
+│   │   ├── 02-team-okr-generator.md
+│   │   ├── 03-working-backwards.md
+│   │   └── 04-amazon-pr-faq.md
 │   ├── synthetic-users/
 │   │   ├── 01-create-synthetic-user.md
 │   │   └── 02-interview-synthetic-user.md
@@ -277,7 +283,9 @@ AI-Prompts-for-Product-Management/
 │   ├── weekly-leadership-update-example.md
 │   ├── product-strategy-canvas-example.md
 │   ├── team-okr-generator-example.md
-│   └── daci-decision-framework-example.md
+│   ├── daci-decision-framework-example.md
+│   ├── working-backwards-example.md
+│   └── amazon-pr-faq-example.md
 ├── mcp-server/
 │   ├── server.py                         # MCP server exposing prompts as tools
 │   ├── requirements.txt
