@@ -56,7 +56,7 @@ Each prompt follows the same structure: context, inputs, and a defined output fo
 | Task | Prompt |
 |---|---|
 | Run a customer interview | `prompts/customer-discovery/01-interview-guide.md` |
-| Analyse sentiment in Jira issues | `prompts/customer-discovery/10-sentiment-analysis-in-workitems` |
+| Analyse sentiment in Jira issues | `prompts/customer-discovery/11-sentiment-analysis-in-workitems` |
 | Gap analysis vs. competitors | `prompts/competitive-analysis/04-capability-gap-analysis.md` |
 | Prioritize features with Kano | `prompts/idea-evaluation/05-kano-analysis.md` |
 | Run a MoSCoW session | `prompts/idea-evaluation/06-moscow-prioritization.md` |

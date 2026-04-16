@@ -1,10 +1,10 @@
 # Example: Sentiment Analysis in Work Items — Onboarding Squad Jira Board
 
-This is a worked example of the Sentiment Analysis in Work Items prompt (`prompts/customer-discovery/10-sentiment-analysis-in-workitems`).
+This is a worked example of the Sentiment Analysis in Work Items prompt (`prompts/customer-discovery/11-sentiment-analysis-in-workitems`).
 
 ## Filled-In Prompt
 
-```
+```text
 You are a senior product intelligence analyst. I will provide you with a set of Jira issues (including titles, descriptions, comments, and metadata such as priority, labels, assignee, and status). Perform a structured sentiment analysis across these issues with the following dimensions: [full prompt template]
 
 Here are the Jira issues:
@@ -77,7 +77,7 @@ Mixed. ONBRD-189 (performance) and ONBRD-214 (race condition) indicate foundatio
 ### 3. High-Signal Issues
 
 | Issue | Dominant Sentiment | Why Flagged | Suggested Action |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | ONBRD-214 | Critical / Escalating | Executive-level customer escalation; buyer remorse language; 3-day block on a named enterprise account | Ship the race condition fix today and have CSM send a personal response to Meridian's VP of Legal with a resolution timeline by end of day |
 | ONBRD-189 | Urgent / Pressured | Active enterprise prospects in trial are affected; fix is ready but QA sign-off is a bottleneck | Expedite QA review — this is blocking sales pipeline, not just existing customers |
 | ONBRD-198 | Chronic / Relieved | Two-quarter delay on a customer-visible bug signals a prioritisation culture issue despite the fix being complete | Use this as a case study in the next sprint retro: what kept this in the backlog for six months? |

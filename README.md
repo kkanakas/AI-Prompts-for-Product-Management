@@ -57,7 +57,7 @@ Go deeper with interviews, transcripts, surveys, and work items.
 | `08-survey-open-ended` | Analyze open-ended survey responses at scale |
 | `09-survey-segment-comparison` | Compare survey results across customer segments |
 | `10-multi-source-patterns` | Surface patterns across multiple research inputs simultaneously |
-| `10-sentiment-analysis-in-workitems` | Structured sentiment analysis across Jira issues — flags escalation language, team health signals, and emerging themes |
+| `11-sentiment-analysis-in-workitems` | Structured sentiment analysis across Jira issues — flags escalation language, team health signals, and emerging themes |
 
 ### Idea Evaluation
 
@@ -182,7 +182,7 @@ Worked examples showing filled-in prompts and generated outputs — useful for u
 | --- | --- |
 | [problem-refinement-example](examples/problem-refinement-example.md) | `customer-discovery/04-problem-refinement` |
 | [stock-portfolio-example](examples/stock-portfolio-example.md) | `prototyping/01-ui-prototype-spec` |
-| [sentiment-analysis-workitems-example](examples/sentiment-analysis-workitems-example.md) | `customer-discovery/10-sentiment-analysis-in-workitems` |
+| [sentiment-analysis-workitems-example](examples/sentiment-analysis-workitems-example.md) | `customer-discovery/11-sentiment-analysis-in-workitems` |
 | [capability-gap-analysis-example](examples/capability-gap-analysis-example.md) | `competitive-analysis/04-capability-gap-analysis` |
 | [kano-analysis-example](examples/kano-analysis-example.md) | `idea-evaluation/05-kano-analysis` |
 | [moscow-prioritization-example](examples/moscow-prioritization-example.md) | `idea-evaluation/06-moscow-prioritization` |
@@ -230,7 +230,7 @@ AI-Prompts-for-Product-Management/
 │   │   ├── 08-survey-open-ended.md
 │   │   ├── 09-survey-segment-comparison.md
 │   │   ├── 10-multi-source-patterns.md
-│   │   └── 10-sentiment-analysis-in-workitems
+│   │   └── 11-sentiment-analysis-in-workitems
 │   ├── idea-evaluation/
 │   │   ├── 01-rice-scoring.md
 │   │   ├── 02-pre-mortem.md

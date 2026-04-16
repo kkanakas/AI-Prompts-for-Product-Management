@@ -20,7 +20,7 @@ All without leaving the conversation.
 ### Tools Exposed
 
 | Tool | What it does | Key args |
-|---|---|---|
+| --- | --- | --- |
 | `list_prompts` | List all prompts, optionally filtered by category | `category` (optional) |
 | `get_categories` | List all categories with counts and descriptions | — |
 | `search_prompts` | Full-text search across titles, purposes, and content | `query` |
@@ -182,7 +182,7 @@ Or with `uv`:
 
 Verify the tools are live inside a Claude Code session:
 
-```
+```text
 /mcp
 ```
 
@@ -315,7 +315,7 @@ Calls `search_prompts("customer discovery")`, then `fill_prompt("customer-discov
 
 > "Analyse the sentiment in these Jira issues and tell me where the team is struggling."
 
-Calls `get_prompt("customer-discovery/10-sentiment-analysis-in-workitems")` and returns the structured sentiment analysis template — paste your Jira export directly into the prompt.
+Calls `get_prompt("customer-discovery/11-sentiment-analysis-in-workitems")` and returns the structured sentiment analysis template — paste your Jira export directly into the prompt.
 
 ### Competitive Analysis
 
@@ -400,7 +400,7 @@ Add a new folder and `.md` files under `prompts/` — the server discovers them 
 
 MCP (Model Context Protocol) is an open standard that lets AI assistants call external tools at runtime. Think of it as a typed API layer between the assistant and your data sources.
 
-```
+```text
 You ─── ask AI ─── AI calls MCP tool ─── server reads .md file ─── returns prompt
 ```
 
