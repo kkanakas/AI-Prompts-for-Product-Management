@@ -21,6 +21,9 @@ Generate technical diagrams directly from your codebase.
 | Prompt | What it does |
 | --- | --- |
 | `01-sequence-diagram-from-repo` | Create a sequence diagram from a code repository |
+| `02-uml-class-diagram-from-repo` | Generate a UML class diagram showing classes, attributes, methods, and relationships from a GitHub repository |
+| `03-erd-from-repo` | Generate an Entity Relationship Diagram showing entities, attributes, primary/foreign keys, and cardinality from a GitHub repository |
+| `04-flowchart-from-repo` | Generate a flowchart capturing control flow, decision points, error paths, and terminal states for a process or feature in a GitHub repository |
 
 ### Communications
 
@@ -211,7 +214,10 @@ AI-Prompts-for-Product-Management/
 │       └── pm-prompts.mdc          # Cursor rule (auto-detected)
 ├── prompts/
 │   ├── architecture-diagrams/
-│   │   └── 01-sequence-diagram-from-repo.md
+│   │   ├── 01-sequence-diagram-from-repo.md
+│   │   ├── 02-uml-class-diagram-from-repo.md
+│   │   ├── 03-erd-from-repo.md
+│   │   └── 04-flowchart-from-repo.md
 │   ├── communications/
 │   │   └── 01-weekly-leadership-update.md
 │   ├── competitive-analysis/

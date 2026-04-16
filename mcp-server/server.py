@@ -19,7 +19,7 @@ mcp = FastMCP("PM Prompts")
 PROMPTS_DIR = Path(__file__).parent.parent / "prompts"
 
 CATEGORY_DESCRIPTIONS = {
-    "architecture-diagrams": "Sequence diagrams from code repositories",
+    "architecture-diagrams": "Sequence diagrams, UML class diagrams, Entity Relationship Diagrams, and flowcharts from code repositories",
     "communications": "Executive updates, weekly leadership messages, stakeholder communications",
     "competitive-analysis": "Positioning, feature comparison, target customers, capability gap analysis",
     "customer-discovery": "Interview guides, transcript analysis, JTBD, survey analysis, sentiment analysis, pattern finding",

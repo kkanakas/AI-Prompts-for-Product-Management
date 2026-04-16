@@ -14,7 +14,9 @@ description: >
   "stakeholder map", "RACI", "DACI", "decision framework", "strategy canvas", "OKR",
   "weekly update", "leadership update", "sentiment analysis", "Jira sentiment",
   "prioritization", "product strategy", "working backwards", "press release", "PR/FAQ",
-  "Amazon press release", "customer value", or any product management task.
+  "Amazon press release", "customer value", "ERD", "entity relationship diagram",
+  "data model", "database schema", "flowchart", "control flow", "decision flow",
+  or any product management task.
 ---
 
 # AI Prompts for Product Managers
@@ -34,7 +36,7 @@ Each prompt follows the same structure: context, inputs, and a defined output fo
 
 | Category | Directory | What's Inside |
 |---|---|---|
-| Architecture Diagrams | `prompts/architecture-diagrams/` | Sequence diagrams from code repositories |
+| Architecture Diagrams | `prompts/architecture-diagrams/` | Sequence diagrams, UML class diagrams, Entity Relationship Diagrams, and flowcharts from code repositories |
 | Communications | `prompts/communications/` | Weekly leadership updates for Teams and Slack |
 | Competitive Analysis | `prompts/competitive-analysis/` | Positioning, feature comparison, target customers, capability gap analysis |
 | Customer Discovery | `prompts/customer-discovery/` | Interview guides, transcript analysis, JTBD, survey analysis, sentiment analysis of work items, pattern finding |
