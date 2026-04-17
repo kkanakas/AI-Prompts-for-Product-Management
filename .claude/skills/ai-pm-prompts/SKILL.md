@@ -16,6 +16,7 @@ description: >
   "prioritization", "product strategy", "working backwards", "press release", "PR/FAQ",
   "Amazon press release", "customer value", "ERD", "entity relationship diagram",
   "data model", "database schema", "flowchart", "control flow", "decision flow",
+  "dependency map", "dependency identification", "critical path", "RAID log",
   or any product management task.
 ---
 
@@ -48,7 +49,7 @@ Each prompt follows the same structure: context, inputs, and a defined output fo
 | Prototyping | `prompts/prototyping/` | UI prototype specs |
 | Release Notes | `prompts/release-notes-generator/` | Release notes from git commit history |
 | Stakeholder Management | `prompts/stakeholder-management/` | RACI matrix, DACI decision framework, stakeholder influence and support analysis |
-| Strategy | `prompts/strategy/` | Product strategy canvas, team OKR generation and cascading, working backwards planning, Amazon PR/FAQ |
+| Strategy | `prompts/strategy/` | Product strategy canvas, team OKR generation and cascading, working backwards planning, Amazon PR/FAQ, dependency identification |
 | Synthetic Users | `prompts/synthetic-users/` | Creating and interviewing AI-generated personas |
 | Trend Analysis | `prompts/trend-analysis/` | Feedback trend monitoring, industry trend identification |
 | User Journey Maps | `prompts/user-journey-maps/` | End-to-end user journey mapping with emotions and opportunities |
@@ -70,6 +71,7 @@ Each prompt follows the same structure: context, inputs, and a defined output fo
 | Write a PRD | `prompts/prds/01-prd-generation.md` |
 | Write a working backwards plan | `prompts/strategy/03-working-backwards.md` |
 | Write an Amazon-style PR/FAQ | `prompts/strategy/04-amazon-pr-faq.md` |
+| Map feature dependencies and critical path | `prompts/strategy/05-dependency-identification.md` |
 
 ## MCP Server
 
