@@ -112,6 +112,8 @@ Write product requirements documents that engineering teams can act on.
 | Prompt | What it does |
 | --- | --- |
 | `01-prd-generation` | Generate a structured PRD in Amazon 6-pager style |
+| `02-use-case-documentation` | Generate complete use case documentation — actor goals, preconditions, main flow, alternative flows, exception handling, business rules, NFRs, and Given/When/Then acceptance criteria |
+| `03-features-and-user-stories` | Convert use case documentation into a sprint-ready backlog — features, user stories with full Given/When/Then criteria, story map, two-sprint plan, and INVEST health check |
 
 ### Prototyping
 
@@ -261,7 +263,9 @@ AI-Prompts-for-Product-Management/
 │   ├── metrics/
 │   │   └── 01-feature-success-metrics.md
 │   ├── prds/
-│   │   └── 01-prd-generation.md
+│   │   ├── 01-prd-generation.md
+│   │   ├── 02-use-case-documentation.md
+│   │   └── 03-features-and-user-stories.md
 │   ├── prototyping/
 │   │   └── 01-ui-prototype-spec.md
 │   ├── release-notes-generator/

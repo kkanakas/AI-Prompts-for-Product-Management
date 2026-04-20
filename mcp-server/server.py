@@ -27,7 +27,7 @@ CATEGORY_DESCRIPTIONS = {
     "ideation": "Problem-to-solution generation, SCAMPER, VRIO, MECE analysis",
     "market-research": "Structured market analysis, cross-referencing sources",
     "metrics": "Feature success metrics and measurement frameworks",
-    "prds": "Product Requirements Documents (Amazon 6-pager style)",
+    "prds": "Product Requirements Documents (Amazon 6-pager style), use case documentation, features and user stories with Given/When/Then acceptance criteria and sprint planning",
     "prototyping": "UI prototype specs",
     "release-notes-generator": "Generating release notes from commit history",
     "stakeholder-management": "RACI matrix, DACI decision framework, stakeholder mapping, influence and support analysis",

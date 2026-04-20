@@ -21,6 +21,9 @@ description: >
   "value proposition", "value prop", "jobs to be done", "pain relievers", "gain creators",
   "problem-solution fit", "product-market fit", "business model fit", "value canvas",
   "big rock", "initiative decomposition", "epic breakdown", "MVP scope", "critical path",
+  "use case", "use case documentation", "actor", "precondition", "main flow", "exception flow",
+  "acceptance criteria", "business rules", "functional requirements",
+  "user story", "given when then", "gherkin", "story map", "INVEST", "story points",
   or any product management task.
 ---
 
@@ -49,7 +52,7 @@ Each prompt follows the same structure: context, inputs, and a defined output fo
 | Ideation | `prompts/ideation/` | Problem-to-solution generation, SCAMPER, VRIO, MECE analysis |
 | Market Research | `prompts/market-research/` | Structured market analysis, cross-referencing sources |
 | Metrics | `prompts/metrics/` | Feature success metrics and measurement frameworks |
-| PRDs | `prompts/prds/` | Product Requirements Documents (Amazon 6-pager style) |
+| PRDs | `prompts/prds/` | Product Requirements Documents (Amazon 6-pager style), use case documentation, features and user stories with Given/When/Then criteria |
 | Prototyping | `prompts/prototyping/` | UI prototype specs |
 | Release Notes | `prompts/release-notes-generator/` | Release notes from git commit history |
 | Stakeholder Management | `prompts/stakeholder-management/` | RACI matrix, DACI decision framework, stakeholder influence and support analysis |
@@ -73,6 +76,8 @@ Each prompt follows the same structure: context, inputs, and a defined output fo
 | Cascade company OKRs to team OKRs | `prompts/strategy/02-team-okr-generator.md` |
 | Write a weekly leadership update | `prompts/communications/01-weekly-leadership-update.md` |
 | Write a PRD | `prompts/prds/01-prd-generation.md` |
+| Write use case documentation | `prompts/prds/02-use-case-documentation.md` |
+| Generate user stories from use cases | `prompts/prds/03-features-and-user-stories.md` |
 | Write a working backwards plan | `prompts/strategy/03-working-backwards.md` |
 | Write an Amazon-style PR/FAQ | `prompts/strategy/04-amazon-pr-faq.md` |
 | Map feature dependencies and critical path | `prompts/strategy/05-dependency-identification.md` |
