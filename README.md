@@ -151,6 +151,7 @@ Set direction, communicate it clearly, and cascade it to your team.
 | `05-dependency-identification` | Identify and categorize all dependencies for a feature initiative across team, technical, product, regulatory, third-party, and timeline dimensions — with a risk-ranked dependency map and critical path |
 | `06-private-preview-plan` | Generate a multi-phased private preview plan — dogfood, trusted pilot, expanded preview, and GA readiness gate — with cohort selection criteria, entry/exit gates, feedback loops, and a risk register |
 | `07-value-proposition` | Design a rigorous value proposition canvas — customer jobs, pains, gains, pain relievers, gain creators — and stress-test it against problem-solution fit, product-market fit, and business model fit |
+| `08-big-rock-decomposition` | Decompose a large initiative into a structured hierarchy of epics, features, and work items — with MVP identification, phased delivery plan, dependency map, critical path, and team allocation |
 
 ### Synthetic Users
 
@@ -275,7 +276,8 @@ AI-Prompts-for-Product-Management/
 │   │   ├── 04-amazon-pr-faq.md
 │   │   ├── 05-dependency-identification.md
 │   │   ├── 06-private-preview-plan.md
-│   │   └── 07-value-proposition.md
+│   │   ├── 07-value-proposition.md
+│   │   └── 08-big-rock-decomposition.md
 │   ├── synthetic-users/
 │   │   ├── 01-create-synthetic-user.md
 │   │   └── 02-interview-synthetic-user.md
