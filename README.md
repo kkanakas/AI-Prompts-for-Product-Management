@@ -150,6 +150,7 @@ Set direction, communicate it clearly, and cascade it to your team.
 | `04-amazon-pr-faq` | Write a full Amazon-style Press Release and FAQ document — the discipline of announcing a finished product before building it, to force clarity on customer value before any code is written |
 | `05-dependency-identification` | Identify and categorize all dependencies for a feature initiative across team, technical, product, regulatory, third-party, and timeline dimensions — with a risk-ranked dependency map and critical path |
 | `06-private-preview-plan` | Generate a multi-phased private preview plan — dogfood, trusted pilot, expanded preview, and GA readiness gate — with cohort selection criteria, entry/exit gates, feedback loops, and a risk register |
+| `07-value-proposition` | Design a rigorous value proposition canvas — customer jobs, pains, gains, pain relievers, gain creators — and stress-test it against problem-solution fit, product-market fit, and business model fit |
 
 ### Synthetic Users
 
@@ -273,7 +274,8 @@ AI-Prompts-for-Product-Management/
 │   │   ├── 03-working-backwards.md
 │   │   ├── 04-amazon-pr-faq.md
 │   │   ├── 05-dependency-identification.md
-│   │   └── 06-private-preview-plan.md
+│   │   ├── 06-private-preview-plan.md
+│   │   └── 07-value-proposition.md
 │   ├── synthetic-users/
 │   │   ├── 01-create-synthetic-user.md
 │   │   └── 02-interview-synthetic-user.md

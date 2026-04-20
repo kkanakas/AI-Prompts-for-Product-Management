@@ -18,6 +18,8 @@ description: >
   "data model", "database schema", "flowchart", "control flow", "decision flow",
   "dependency map", "dependency identification", "critical path", "RAID log",
   "private preview", "alpha", "beta", "GA readiness", "cohort", "pilot plan",
+  "value proposition", "value prop", "jobs to be done", "pain relievers", "gain creators",
+  "problem-solution fit", "product-market fit", "business model fit", "value canvas",
   or any product management task.
 ---
 
@@ -50,7 +52,7 @@ Each prompt follows the same structure: context, inputs, and a defined output fo
 | Prototyping | `prompts/prototyping/` | UI prototype specs |
 | Release Notes | `prompts/release-notes-generator/` | Release notes from git commit history |
 | Stakeholder Management | `prompts/stakeholder-management/` | RACI matrix, DACI decision framework, stakeholder influence and support analysis |
-| Strategy | `prompts/strategy/` | Product strategy canvas, team OKR generation and cascading, working backwards planning, Amazon PR/FAQ, dependency identification, private preview planning |
+| Strategy | `prompts/strategy/` | Product strategy canvas, OKR generation, working backwards, Amazon PR/FAQ, dependency identification, private preview planning, value proposition design |
 | Synthetic Users | `prompts/synthetic-users/` | Creating and interviewing AI-generated personas |
 | Trend Analysis | `prompts/trend-analysis/` | Feedback trend monitoring, industry trend identification |
 | User Journey Maps | `prompts/user-journey-maps/` | End-to-end user journey mapping with emotions and opportunities |
@@ -74,6 +76,7 @@ Each prompt follows the same structure: context, inputs, and a defined output fo
 | Write an Amazon-style PR/FAQ | `prompts/strategy/04-amazon-pr-faq.md` |
 | Map feature dependencies and critical path | `prompts/strategy/05-dependency-identification.md` |
 | Plan a multi-phased private preview | `prompts/strategy/06-private-preview-plan.md` |
+| Design a value proposition canvas | `prompts/strategy/07-value-proposition.md` |
 
 ## MCP Server
 
