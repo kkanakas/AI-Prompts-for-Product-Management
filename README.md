@@ -8,7 +8,7 @@ This repo organizes proven PM prompts into a **Claude Code**–compatible skill 
 
 The library covers the full PM workflow — from customer discovery and competitive analysis through to stakeholder alignment, strategy, and executive communication. Every prompt follows the same structure: context, inputs, and a defined output format so you get consistent, usable results.
 
-The library contains 16 categories, 35+ prompts, and 11 worked examples.
+The library contains 16 categories, 55+ prompts, and 13 worked examples.
 
 ---
 
@@ -154,6 +154,7 @@ Set direction, communicate it clearly, and cascade it to your team.
 | `06-private-preview-plan` | Generate a multi-phased private preview plan — dogfood, trusted pilot, expanded preview, and GA readiness gate — with cohort selection criteria, entry/exit gates, feedback loops, and a risk register |
 | `07-value-proposition` | Design a rigorous value proposition canvas — customer jobs, pains, gains, pain relievers, gain creators — and stress-test it against problem-solution fit, product-market fit, and business model fit |
 | `08-big-rock-decomposition` | Decompose a large initiative into a structured hierarchy of epics, features, and work items — with MVP identification, phased delivery plan, dependency map, critical path, and team allocation |
+| `11-launch-gates` | Define and evaluate launch gates across Engineering, Security, Product, Documentation, Legal, and GTM — with a Go/No-Go scorecard, waiver register, meeting agenda, and post-release monitoring plan |
 
 ### Synthetic Users
 
@@ -281,7 +282,8 @@ AI-Prompts-for-Product-Management/
 │   │   ├── 05-dependency-identification.md
 │   │   ├── 06-private-preview-plan.md
 │   │   ├── 07-value-proposition.md
-│   │   └── 08-big-rock-decomposition.md
+│   │   ├── 08-big-rock-decomposition.md
+│   │   └── 11-launch-gates.md
 │   ├── synthetic-users/
 │   │   ├── 01-create-synthetic-user.md
 │   │   └── 02-interview-synthetic-user.md

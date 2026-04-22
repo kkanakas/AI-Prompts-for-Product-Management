@@ -24,6 +24,8 @@ description: >
   "use case", "use case documentation", "actor", "precondition", "main flow", "exception flow",
   "acceptance criteria", "business rules", "functional requirements",
   "user story", "given when then", "gherkin", "story map", "INVEST", "story points",
+  "launch gate", "go no-go", "release readiness", "release gate", "gate review",
+  "launch checklist", "release criteria", "waiver", "post-release monitoring",
   or any product management task.
 ---
 
@@ -56,7 +58,7 @@ Each prompt follows the same structure: context, inputs, and a defined output fo
 | Prototyping | `prompts/prototyping/` | UI prototype specs |
 | Release Notes | `prompts/release-notes-generator/` | Release notes from git commit history |
 | Stakeholder Management | `prompts/stakeholder-management/` | RACI matrix, DACI decision framework, stakeholder influence and support analysis |
-| Strategy | `prompts/strategy/` | Product strategy canvas, OKR generation, working backwards, Amazon PR/FAQ, dependency identification, private preview planning, value proposition design, Big Rock decomposition |
+| Strategy | `prompts/strategy/` | Product strategy canvas, OKR generation, working backwards, Amazon PR/FAQ, dependency identification, private preview planning, value proposition design, Big Rock decomposition, launch gates |
 | Synthetic Users | `prompts/synthetic-users/` | Creating and interviewing AI-generated personas |
 | Trend Analysis | `prompts/trend-analysis/` | Feedback trend monitoring, industry trend identification |
 | User Journey Maps | `prompts/user-journey-maps/` | End-to-end user journey mapping with emotions and opportunities |
@@ -84,6 +86,7 @@ Each prompt follows the same structure: context, inputs, and a defined output fo
 | Plan a multi-phased private preview | `prompts/strategy/06-private-preview-plan.md` |
 | Design a value proposition canvas | `prompts/strategy/07-value-proposition.md` |
 | Decompose a Big Rock into epics and features | `prompts/strategy/08-big-rock-decomposition.md` |
+| Define and run launch gate reviews | `prompts/strategy/11-launch-gates.md` |
 
 ## MCP Server
 

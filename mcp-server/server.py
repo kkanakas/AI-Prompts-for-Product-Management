@@ -31,7 +31,7 @@ CATEGORY_DESCRIPTIONS = {
     "prototyping": "UI prototype specs",
     "release-notes-generator": "Generating release notes from commit history",
     "stakeholder-management": "RACI matrix, DACI decision framework, stakeholder mapping, influence and support analysis",
-    "strategy": "Product strategy canvas, OKR generation, working backwards, Amazon PR/FAQ, dependency identification, private preview planning, value proposition design, Big Rock decomposition",
+    "strategy": "Product strategy canvas, OKR generation, working backwards, Amazon PR/FAQ, dependency identification, private preview planning, value proposition design, Big Rock decomposition, launch gates",
     "synthetic-users": "Creating and interviewing AI-generated personas",
     "trend-analysis": "Feedback trend monitoring, industry trend identification",
     "user-journey-maps": "User journey mapping",
@@ -121,7 +121,7 @@ def list_prompts(category: str = "") -> str:
                   'trend-analysis', 'synthetic-users', 'prds', 'metrics',
                   'prototyping', 'release-notes-generator', 'user-journey-maps',
                   'architecture-diagrams', 'communications', 'stakeholder-management',
-                  'strategy'. Leave empty to list every prompt.
+                  'strategy'. Leave empty to list all 55+ prompts across 16 categories.
 
     Returns:
         JSON array — each item has: id, title, phase, purpose, category.
