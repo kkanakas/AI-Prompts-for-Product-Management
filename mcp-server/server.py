@@ -20,7 +20,7 @@ PROMPTS_DIR = Path(__file__).parent.parent / "prompts"
 
 CATEGORY_DESCRIPTIONS = {
     "architecture-diagrams": "Sequence diagrams, UML class diagrams, Entity Relationship Diagrams, and flowcharts from code repositories",
-    "communications": "Executive updates, weekly leadership messages, stakeholder communications",
+    "communications": "Weekly leadership updates, customer meeting transcript to Slack update and Jira ticket descriptions",
     "competitive-analysis": "Positioning, feature comparison, target customers, capability gap analysis",
     "customer-discovery": "Interview guides, transcript analysis, JTBD, survey analysis, sentiment analysis, pattern finding",
     "idea-evaluation": "RICE scoring, pre-mortem, assumption mapping, validation questions, Kano analysis, MoSCoW prioritization",

@@ -32,6 +32,7 @@ Turn raw weekly notes into polished, executive-ready messages.
 | Prompt | What it does |
 | --- | --- |
 | `01-weekly-leadership-update` | Generate a structured Teams or Slack weekly update for VP and C-suite audiences |
+| `02-customer-meeting-to-team-update` | Convert a customer meeting transcript into a structured leadership Slack update and optional Jira ticket descriptions — with environment, challenges, feedback, feature requests, next steps, and strategic signals |
 
 ### Competitive Analysis
 
@@ -226,7 +227,8 @@ AI-Prompts-for-Product-Management/
 │   │   ├── 03-erd-from-repo.md
 │   │   └── 04-flowchart-from-repo.md
 │   ├── communications/
-│   │   └── 01-weekly-leadership-update.md
+│   │   ├── 01-weekly-leadership-update.md
+│   │   └── 02-customer-meeting-to-team-update.md
 │   ├── competitive-analysis/
 │   │   ├── 01-positioning-messaging.md
 │   │   ├── 02-feature-comparison.md

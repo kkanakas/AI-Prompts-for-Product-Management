@@ -26,6 +26,8 @@ description: >
   "user story", "given when then", "gherkin", "story map", "INVEST", "story points",
   "launch gate", "go no-go", "release readiness", "release gate", "gate review",
   "launch checklist", "release criteria", "waiver", "post-release monitoring",
+  "customer meeting", "meeting transcript", "meeting notes", "customer update",
+  "meeting summary", "slack update", "jira from transcript",
   or any product management task.
 ---
 
@@ -47,7 +49,7 @@ Each prompt follows the same structure: context, inputs, and a defined output fo
 | Category | Directory | What's Inside |
 |---|---|---|
 | Architecture Diagrams | `prompts/architecture-diagrams/` | Sequence diagrams, UML class diagrams, Entity Relationship Diagrams, and flowcharts from code repositories |
-| Communications | `prompts/communications/` | Weekly leadership updates for Teams and Slack |
+| Communications | `prompts/communications/` | Weekly leadership updates, customer meeting transcript to Slack update and Jira tickets |
 | Competitive Analysis | `prompts/competitive-analysis/` | Positioning, feature comparison, target customers, capability gap analysis |
 | Customer Discovery | `prompts/customer-discovery/` | Interview guides, transcript analysis, JTBD, survey analysis, sentiment analysis of work items, pattern finding |
 | Idea Evaluation | `prompts/idea-evaluation/` | RICE scoring, pre-mortem, assumption mapping, validation questions, Kano analysis, MoSCoW prioritization |
@@ -77,6 +79,7 @@ Each prompt follows the same structure: context, inputs, and a defined output fo
 | Build a product strategy canvas | `prompts/strategy/01-product-strategy-canvas.md` |
 | Cascade company OKRs to team OKRs | `prompts/strategy/02-team-okr-generator.md` |
 | Write a weekly leadership update | `prompts/communications/01-weekly-leadership-update.md` |
+| Turn a customer meeting into a Slack update + Jira tickets | `prompts/communications/02-customer-meeting-to-team-update.md` |
 | Write a PRD | `prompts/prds/01-prd-generation.md` |
 | Write use case documentation | `prompts/prds/02-use-case-documentation.md` |
 | Generate user stories from use cases | `prompts/prds/03-features-and-user-stories.md` |
