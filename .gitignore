@@ -1,0 +1,14 @@
+# Claude Desktop skill build artifact — regenerate with: bash claude-desktop-skill/build.sh
+ai-pm-prompts-claude-desktop.zip
+
+# Python
+__pycache__/
+*.pyc
+.mypy_cache/
+mcp-server/.venv/
+
+# macOS
+.DS_Store
+
+# Editor
+.vscode/

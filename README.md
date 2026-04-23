@@ -220,6 +220,10 @@ AI-Prompts-for-Product-Management/
 ├── .cursor/
 │   └── rules/
 │       └── pm-prompts.mdc          # Cursor rule (auto-detected)
+├── claude-desktop-skill/
+│   ├── SKILL.md                     # Claude Desktop-optimised skill definition
+│   ├── build.sh                     # Assembles the uploadable ZIP
+│   └── README.md                    # Claude Desktop installation guide
 ├── prompts/
 │   ├── architecture-diagrams/
 │   │   ├── 01-sequence-diagram-from-repo.md
@@ -353,26 +357,37 @@ Claude Code reads the `SKILL.md` description and trigger phrases to decide when 
 
 ### Install in Claude Desktop
 
-Claude Desktop installs skills via a ZIP upload through the UI.
+Claude Desktop installs skills via a ZIP upload through the UI. A dedicated `claude-desktop-skill/` folder contains a Claude Desktop-optimised skill definition and a build script that assembles the correct ZIP.
 
-**Step 1 — Create the skill ZIP:**
+**Step 1 — Build the skill ZIP:**
 
 ```bash
-zip -r ai-pm-prompts.zip SKILL.md prompts/ examples/
+bash claude-desktop-skill/build.sh
 ```
+
+This produces `ai-pm-prompts-claude-desktop.zip` in the repo root — a clean archive with `SKILL.md` at the root and the full `prompts/` library inside.
 
 **Step 2 — Upload the skill:**
 
-1. Open Claude Desktop
+1. Open **Claude Desktop**
 2. Go to **Customize → Skills**
-3. Click the **+** button → **Create skill**
-4. Select **Upload a skill**
-5. Upload `ai-pm-prompts.zip`
-6. Toggle the skill **on**
+3. Click **+** → **Create skill** → **Upload a skill**
+4. Upload `ai-pm-prompts-claude-desktop.zip`
+5. Toggle the skill **on**
 
-The skill will now appear in Claude Desktop and will be suggested automatically when you ask about customer discovery, prioritization, stakeholder mapping, OKRs, strategy, or any other PM task covered by the library.
+The skill is now active. Claude Desktop will suggest it automatically when you ask about customer discovery, prioritization, stakeholder mapping, OKRs, strategy, launch gates, or any other PM task in the library.
+
+**Updating after new prompts are added:**
+
+```bash
+git pull
+bash claude-desktop-skill/build.sh
+# Re-upload ai-pm-prompts-claude-desktop.zip in Claude Desktop
+```
 
 > **Note:** Code execution must be enabled in Claude Desktop settings for skills to function. For Team or Enterprise plans, your organisation owner must enable "Code execution and file creation" and "Skills" before custom skills can be uploaded.
+>
+> See `claude-desktop-skill/README.md` for full details on the skill package structure.
 
 ---
 
