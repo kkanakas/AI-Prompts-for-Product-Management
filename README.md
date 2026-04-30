@@ -105,6 +105,7 @@ Define what success looks like before you build.
 | Prompt | What it does |
 | --- | --- |
 | `01-feature-success-metrics` | Define leading and lagging success metrics for a feature |
+| `02-ai-product-metrics` | Comprehensive metrics framework for AI-driven products — latency, task completion, output quality, business value, and trust and safety |
 
 ### PRDs
 
@@ -268,7 +269,8 @@ AI-Prompts-for-Product-Management/
 │   │   ├── 02-evidence-and-contradictions.md
 │   │   └── 03-comprehensive-market-landscape.md
 │   ├── metrics/
-│   │   └── 01-feature-success-metrics.md
+│   │   ├── 01-feature-success-metrics.md
+│   │   └── 02-ai-product-metrics.md
 │   ├── prds/
 │   │   ├── 01-prd-generation.md
 │   │   ├── 02-use-case-documentation.md

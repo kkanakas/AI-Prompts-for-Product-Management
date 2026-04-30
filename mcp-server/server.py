@@ -26,7 +26,7 @@ CATEGORY_DESCRIPTIONS = {
     "idea-evaluation": "RICE scoring, pre-mortem, assumption mapping, validation questions, Kano analysis, MoSCoW prioritization",
     "ideation": "Problem-to-solution generation, SCAMPER, VRIO, MECE analysis",
     "market-research": "Structured market analysis, cross-referencing sources",
-    "metrics": "Feature success metrics and measurement frameworks",
+    "metrics": "Feature success metrics, and AI product metrics frameworks covering latency, task completion, output quality, business value, and trust and safety",
     "prds": "Product Requirements Documents (Amazon 6-pager style), use case documentation, features and user stories with Given/When/Then acceptance criteria and sprint planning",
     "prototyping": "UI prototype specs",
     "release-notes-generator": "Generating release notes from commit history",

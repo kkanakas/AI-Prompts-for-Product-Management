@@ -55,7 +55,7 @@ Each prompt follows the same structure: context, inputs, and a defined output fo
 | Idea Evaluation | `prompts/idea-evaluation/` | RICE scoring, pre-mortem, assumption mapping, validation questions, Kano analysis, MoSCoW prioritization |
 | Ideation | `prompts/ideation/` | Problem-to-solution generation, SCAMPER, VRIO, MECE analysis |
 | Market Research | `prompts/market-research/` | Structured market analysis, cross-referencing sources |
-| Metrics | `prompts/metrics/` | Feature success metrics and measurement frameworks |
+| Metrics | `prompts/metrics/` | Feature success metrics, and AI product metrics frameworks covering latency, task completion, output quality, business value, and trust and safety |
 | PRDs | `prompts/prds/` | Product Requirements Documents (Amazon 6-pager style), use case documentation, features and user stories with Given/When/Then criteria |
 | Prototyping | `prompts/prototyping/` | UI prototype specs |
 | Release Notes | `prompts/release-notes-generator/` | Release notes from git commit history |
