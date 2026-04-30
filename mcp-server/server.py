@@ -28,7 +28,7 @@ CATEGORY_DESCRIPTIONS = {
     "market-research": "Structured market analysis, cross-referencing sources",
     "metrics": "Feature success metrics, and AI product metrics frameworks covering latency, task completion, output quality, business value, and trust and safety",
     "prds": "Product Requirements Documents (Amazon 6-pager style), use case documentation, features and user stories with Given/When/Then acceptance criteria and sprint planning",
-    "prototyping": "UI prototype specs",
+    "prototyping": "Lo-fi wireframe briefs, mid-fi flow specs, clickthrough demo scripts, Wizard of Oz protocols, prompt-powered UI generation, AI feature stubs, agent workflow simulations, API-connected LLM prototypes, narrative prototypes, and data dashboard prototypes",
     "release-notes-generator": "Generating release notes from commit history",
     "stakeholder-management": "RACI matrix, DACI decision framework, stakeholder mapping, influence and support analysis",
     "strategy": "Product strategy canvas, OKR generation, working backwards, Amazon PR/FAQ, dependency identification, private preview planning, value proposition design, Big Rock decomposition, launch gates",

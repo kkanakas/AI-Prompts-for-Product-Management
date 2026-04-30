@@ -27,6 +27,11 @@ description: >
   "user story", "given when then", "gherkin", "story map", "INVEST", "story points",
   "launch gate", "go no-go", "release readiness", "gate review", "launch checklist",
   "customer meeting", "meeting transcript", "meeting summary", "slack update",
+  "wireframe", "wireframe brief", "lo-fi", "mid-fi", "figma flow", "clickthrough demo",
+  "arcade demo", "wizard of oz", "WoZ", "AI stub", "hardcoded AI", "agent workflow",
+  "agentic prototype", "API prototype", "LLM prototype", "narrative prototype",
+  "data prototype", "data dashboard", "AI metrics", "latency", "task completion rate",
+  "hallucination rate", "trust and safety", "token efficiency", "AI product metrics",
   or any product management task.
 ---
 
@@ -141,6 +146,7 @@ Define what success looks like before you build.
 | Prompt | File path |
 |---|---|
 | Feature Success Metrics | `prompts/metrics/01-feature-success-metrics.md` |
+| AI Product Metrics Framework | `prompts/metrics/02-ai-product-metrics.md` |
 
 ### PRDs and Requirements
 Write requirements that engineering teams can act on.
@@ -152,11 +158,21 @@ Write requirements that engineering teams can act on.
 | Features and User Stories | `prompts/prds/03-features-and-user-stories.md` |
 
 ### Prototyping
-Specify UI prototypes with enough detail for engineers and designers.
+Build and test prototypes across every fidelity level.
 
 | Prompt | File path |
 |---|---|
 | UI Prototype Spec | `prompts/prototyping/01-ui-prototype-spec.md` |
+| Lo-Fi Wireframe Brief | `prompts/prototyping/02-wireframe-brief.md` |
+| Mid-Fi Flow Spec | `prompts/prototyping/03-mid-fi-flow-spec.md` |
+| Clickthrough Demo Script | `prompts/prototyping/04-clickthrough-demo-script.md` |
+| Wizard of Oz Protocol | `prompts/prototyping/05-wizard-of-oz-protocol.md` |
+| Prompt-Powered UI Generator | `prompts/prototyping/06-prompt-powered-ui.md` |
+| AI Feature Stub | `prompts/prototyping/07-ai-feature-stub.md` |
+| Agent Workflow Simulation | `prompts/prototyping/08-agent-workflow-simulation.md` |
+| API-Connected Prototype Spec | `prompts/prototyping/09-api-connected-prototype.md` |
+| Narrative Prototype | `prompts/prototyping/10-narrative-prototype.md` |
+| Data Prototype Spec | `prompts/prototyping/11-data-prototype-spec.md` |
 
 ### Release Notes
 Generate clear, customer-friendly release notes from commit history.
@@ -241,6 +257,14 @@ Visualize the end-to-end customer experience.
 | Define and run launch gates | `prompts/strategy/11-launch-gates.md` |
 | Generate an ERD from a repo | `prompts/architecture-diagrams/03-erd-from-repo.md` |
 | Generate a flowchart from a repo | `prompts/architecture-diagrams/04-flowchart-from-repo.md` |
+| Build a wireframe brief | `prompts/prototyping/02-wireframe-brief.md` |
+| Script a clickthrough demo | `prompts/prototyping/04-clickthrough-demo-script.md` |
+| Design a Wizard of Oz test | `prompts/prototyping/05-wizard-of-oz-protocol.md` |
+| Generate a working UI with v0/Claude | `prompts/prototyping/06-prompt-powered-ui.md` |
+| Create AI feature stubs for trust testing | `prompts/prototyping/07-ai-feature-stub.md` |
+| Map an agentic workflow | `prompts/prototyping/08-agent-workflow-simulation.md` |
+| Write a narrative prototype | `prompts/prototyping/10-narrative-prototype.md` |
+| Define AI product metrics | `prompts/metrics/02-ai-product-metrics.md` |
 
 ---
 

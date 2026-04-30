@@ -119,11 +119,21 @@ Write product requirements documents that engineering teams can act on.
 
 ### Prototyping
 
-Specify UI prototypes with enough detail for engineers and designers.
+Build and test prototypes across every fidelity level — from wireframes and mid-fi flows to AI feature stubs, Wizard of Oz sessions, and API-connected LLM prototypes.
 
 | Prompt | What it does |
 | --- | --- |
-| `01-ui-prototype-spec` | Generate a detailed UI prototype specification |
+| `01-ui-prototype-spec` | Generate a detailed UI prototype specification for vibe-coding tools |
+| `02-wireframe-brief` | Generate a lo-fi wireframe brief — screen inventory, IA, and per-screen annotation for Balsamiq or Whimsical |
+| `03-mid-fi-flow-spec` | Generate a grayscale mid-fi flow specification for Figma — navigation map, component inventory, and screen states |
+| `04-clickthrough-demo-script` | Generate a scene-by-scene demo script and storyboard for Arcade, Loom, or Demostack |
+| `05-wizard-of-oz-protocol` | Generate a complete Wizard of Oz test plan — roles, wizard playbook, session guide, and observation framework |
+| `06-prompt-powered-ui` | Generate a ready-to-paste code-generation prompt for v0.dev, Claude Artifacts, or Lovable |
+| `07-ai-feature-stub` | Generate a library of hardcoded AI outputs and a trust testing protocol for AI feature validation |
+| `08-agent-workflow-simulation` | Generate a multi-step agentic workflow map with task decomposition, handoffs, and error paths |
+| `09-api-connected-prototype` | Generate a spec for connecting a real LLM API to a rough front-end — system prompt, schema, and test scenarios |
+| `10-narrative-prototype` | Generate a future-state narrative prototype and stakeholder validation plan |
+| `11-data-prototype-spec` | Generate a data dashboard prototype spec — insight hypotheses, chart inventory, sample data, and user validation plan |
 
 ### Release Notes
 
@@ -276,7 +286,17 @@ AI-Prompts-for-Product-Management/
 │   │   ├── 02-use-case-documentation.md
 │   │   └── 03-features-and-user-stories.md
 │   ├── prototyping/
-│   │   └── 01-ui-prototype-spec.md
+│   │   ├── 01-ui-prototype-spec.md
+│   │   ├── 02-wireframe-brief.md
+│   │   ├── 03-mid-fi-flow-spec.md
+│   │   ├── 04-clickthrough-demo-script.md
+│   │   ├── 05-wizard-of-oz-protocol.md
+│   │   ├── 06-prompt-powered-ui.md
+│   │   ├── 07-ai-feature-stub.md
+│   │   ├── 08-agent-workflow-simulation.md
+│   │   ├── 09-api-connected-prototype.md
+│   │   ├── 10-narrative-prototype.md
+│   │   └── 11-data-prototype-spec.md
 │   ├── release-notes-generator/
 │   │   └── 01-release-notes-generator.md
 │   ├── stakeholder-management/

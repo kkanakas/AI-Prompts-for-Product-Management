@@ -57,7 +57,7 @@ Each prompt follows the same structure: context, inputs, and a defined output fo
 | Market Research | `prompts/market-research/` | Structured market analysis, cross-referencing sources |
 | Metrics | `prompts/metrics/` | Feature success metrics, and AI product metrics frameworks covering latency, task completion, output quality, business value, and trust and safety |
 | PRDs | `prompts/prds/` | Product Requirements Documents (Amazon 6-pager style), use case documentation, features and user stories with Given/When/Then criteria |
-| Prototyping | `prompts/prototyping/` | UI prototype specs |
+| Prototyping | `prompts/prototyping/` | Lo-fi wireframe briefs, mid-fi flow specs, clickthrough demo scripts, Wizard of Oz protocols, prompt-powered UI generation, AI feature stubs, agent workflow simulations, API-connected LLM prototypes, narrative prototypes, and data dashboard prototypes |
 | Release Notes | `prompts/release-notes-generator/` | Release notes from git commit history |
 | Stakeholder Management | `prompts/stakeholder-management/` | RACI matrix, DACI decision framework, stakeholder influence and support analysis |
 | Strategy | `prompts/strategy/` | Product strategy canvas, OKR generation, working backwards, Amazon PR/FAQ, dependency identification, private preview planning, value proposition design, Big Rock decomposition, launch gates |
