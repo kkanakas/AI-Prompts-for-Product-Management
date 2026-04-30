@@ -1,38 +1,15 @@
 ---
 name: ai-pm-prompts
 description: >
-  A structured library of AI prompts for Product Managers covering the full product lifecycle.
-  Use this skill whenever a PM needs help with customer interviews, research synthesis, market
-  analysis, competitive intelligence, capability gap analysis, ideation, idea evaluation,
-  Kano analysis, MoSCoW prioritization, RICE scoring, stakeholder mapping, RACI matrix,
-  DACI decision framework, product strategy canvas, OKR generation, weekly leadership updates,
-  sentiment analysis of work items, PRD generation, use case documentation, user story generation,
-  user journey mapping, release notes, prototyping, dependency identification, private preview
-  planning, value proposition design, Big Rock decomposition, launch gates, architecture diagrams,
-  ERD, flowcharts, UML class diagrams, customer meeting summaries, or any product management task.
-  Triggers on phrases like "customer discovery", "interview guide", "competitive analysis",
-  "gap analysis", "SWOT", "market research", "trend analysis", "ideation", "pre-mortem",
-  "RICE scoring", "Kano", "MoSCoW", "synthetic user", "problem statement", "JTBD",
-  "stakeholder map", "RACI", "DACI", "decision framework", "strategy canvas", "OKR",
-  "weekly update", "leadership update", "sentiment analysis", "Jira sentiment",
-  "prioritization", "product strategy", "working backwards", "press release", "PR/FAQ",
-  "Amazon press release", "customer value", "ERD", "entity relationship diagram",
-  "data model", "database schema", "flowchart", "control flow", "decision flow",
-  "dependency map", "dependency identification", "critical path", "RAID log",
-  "private preview", "alpha", "beta", "GA readiness", "cohort", "pilot plan",
-  "value proposition", "value prop", "jobs to be done", "pain relievers", "gain creators",
-  "problem-solution fit", "product-market fit", "business model fit", "value canvas",
-  "big rock", "initiative decomposition", "epic breakdown", "MVP scope",
-  "use case", "use case documentation", "acceptance criteria", "business rules",
-  "user story", "given when then", "gherkin", "story map", "INVEST", "story points",
-  "launch gate", "go no-go", "release readiness", "gate review", "launch checklist",
-  "customer meeting", "meeting transcript", "meeting summary", "slack update",
-  "wireframe", "wireframe brief", "lo-fi", "mid-fi", "figma flow", "clickthrough demo",
-  "arcade demo", "wizard of oz", "WoZ", "AI stub", "hardcoded AI", "agent workflow",
-  "agentic prototype", "API prototype", "LLM prototype", "narrative prototype",
-  "data prototype", "data dashboard", "AI metrics", "latency", "task completion rate",
-  "hallucination rate", "trust and safety", "token efficiency", "AI product metrics",
-  or any product management task.
+  A structured library of AI prompts for Product Managers covering the full product lifecycle —
+  discovery, research, ideation, evaluation, strategy, requirements, metrics, prototyping, and
+  communication. Use for customer interviews, competitive analysis, JTBD, RICE, Kano, MoSCoW,
+  RACI, DACI, OKRs, PRDs, user stories, working backwards, PR/FAQ, Big Rock decomposition,
+  launch gates, value proposition design, dependency mapping, private preview planning,
+  architecture diagrams, release notes, user journey maps, synthetic users, weekly leadership
+  updates, AI product metrics, wireframes, clickthrough demos, Wizard of Oz protocols,
+  AI feature stubs, agent workflow simulations, API-connected prototypes, narrative prototypes,
+  and data dashboard prototypes.
 ---
 
 # AI Prompts for Product Managers — Claude Desktop Skill
