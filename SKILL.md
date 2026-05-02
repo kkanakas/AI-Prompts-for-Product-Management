@@ -56,7 +56,7 @@ Each prompt follows the same structure: context, inputs, and a defined output fo
 | Ideation | `prompts/ideation/` | Problem-to-solution generation, SCAMPER, VRIO, MECE analysis |
 | Market Research | `prompts/market-research/` | Structured market analysis, cross-referencing sources |
 | Metrics | `prompts/metrics/` | Feature success metrics, and AI product metrics frameworks covering latency, task completion, output quality, business value, and trust and safety |
-| PRDs | `prompts/prds/` | Product Requirements Documents (Amazon 6-pager style), use case documentation, features and user stories with Given/When/Then criteria |
+| PRDs | `prompts/prds/` | Product Requirements Documents (Amazon 6-pager style), use case documentation, features and user stories, and a dedicated Given/When/Then acceptance criteria generator with And chaining and But negative assertions |
 | Prototyping | `prompts/prototyping/` | Lo-fi wireframe briefs, mid-fi flow specs, clickthrough demo scripts, Wizard of Oz protocols, prompt-powered UI generation, AI feature stubs, agent workflow simulations, API-connected LLM prototypes, narrative prototypes, and data dashboard prototypes |
 | Release Notes | `prompts/release-notes-generator/` | Release notes from git commit history |
 | Stakeholder Management | `prompts/stakeholder-management/` | RACI matrix, DACI decision framework, stakeholder influence and support analysis |
@@ -83,6 +83,7 @@ Each prompt follows the same structure: context, inputs, and a defined output fo
 | Write a PRD | `prompts/prds/01-prd-generation.md` |
 | Write use case documentation | `prompts/prds/02-use-case-documentation.md` |
 | Generate user stories from use cases | `prompts/prds/03-features-and-user-stories.md` |
+| Generate Given/When/Then acceptance criteria (with And/But) from a requirements or use case doc | `prompts/prds/04-given-when-then.md` |
 | Write a working backwards plan | `prompts/strategy/03-working-backwards.md` |
 | Write an Amazon-style PR/FAQ | `prompts/strategy/04-amazon-pr-faq.md` |
 | Map feature dependencies and critical path | `prompts/strategy/05-dependency-identification.md` |

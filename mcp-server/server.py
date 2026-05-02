@@ -27,7 +27,7 @@ CATEGORY_DESCRIPTIONS = {
     "ideation": "Problem-to-solution generation, SCAMPER, VRIO, MECE analysis",
     "market-research": "Structured market analysis, cross-referencing sources",
     "metrics": "Feature success metrics, and AI product metrics frameworks covering latency, task completion, output quality, business value, and trust and safety",
-    "prds": "Product Requirements Documents (Amazon 6-pager style), use case documentation, features and user stories with Given/When/Then acceptance criteria and sprint planning",
+    "prds": "Product Requirements Documents (Amazon 6-pager style), use case documentation, features and user stories with Given/When/Then acceptance criteria, sprint planning, and a dedicated Given/When/Then acceptance criteria generator (including And chaining and But negative assertions) from any requirements or use case document",
     "prototyping": "Lo-fi wireframe briefs, mid-fi flow specs, clickthrough demo scripts, Wizard of Oz protocols, prompt-powered UI generation, AI feature stubs, agent workflow simulations, API-connected LLM prototypes, narrative prototypes, and data dashboard prototypes",
     "release-notes-generator": "Generating release notes from commit history",
     "stakeholder-management": "RACI matrix, DACI decision framework, stakeholder mapping, influence and support analysis",

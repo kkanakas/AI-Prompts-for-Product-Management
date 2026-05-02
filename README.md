@@ -116,6 +116,7 @@ Write product requirements documents that engineering teams can act on.
 | `01-prd-generation` | Generate a structured PRD in Amazon 6-pager style |
 | `02-use-case-documentation` | Generate complete use case documentation — actor goals, preconditions, main flow, alternative flows, exception handling, business rules, NFRs, and Given/When/Then acceptance criteria |
 | `03-features-and-user-stories` | Convert use case documentation into a sprint-ready backlog — features, user stories with full Given/When/Then criteria, story map, two-sprint plan, and INVEST health check |
+| `04-given-when-then` | Generate a complete set of Given/When/Then acceptance criteria from any requirements or use case document — happy path, alternative flows, exception handling, edge cases, business rules, and NFRs — with full And chaining and But negative assertions |
 
 ### Prototyping
 
@@ -284,7 +285,8 @@ AI-Prompts-for-Product-Management/
 │   ├── prds/
 │   │   ├── 01-prd-generation.md
 │   │   ├── 02-use-case-documentation.md
-│   │   └── 03-features-and-user-stories.md
+│   │   ├── 03-features-and-user-stories.md
+│   │   └── 04-given-when-then.md
 │   ├── prototyping/
 │   │   ├── 01-ui-prototype-spec.md
 │   │   ├── 02-wireframe-brief.md

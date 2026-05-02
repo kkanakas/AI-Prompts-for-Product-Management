@@ -133,6 +133,7 @@ Write requirements that engineering teams can act on.
 | PRD Generation | `prompts/prds/01-prd-generation.md` |
 | Use Case Documentation | `prompts/prds/02-use-case-documentation.md` |
 | Features and User Stories | `prompts/prds/03-features-and-user-stories.md` |
+| Given / When / Then Criteria Generator (with And chaining and But negative assertions) | `prompts/prds/04-given-when-then.md` |
 
 ### Prototyping
 Build and test prototypes across every fidelity level.
@@ -225,6 +226,7 @@ Visualize the end-to-end customer experience.
 | Write a PRD | `prompts/prds/01-prd-generation.md` |
 | Write use case documentation | `prompts/prds/02-use-case-documentation.md` |
 | Generate user stories | `prompts/prds/03-features-and-user-stories.md` |
+| Generate Given/When/Then (with And/But) from a requirements doc | `prompts/prds/04-given-when-then.md` |
 | Write a working backwards plan | `prompts/strategy/03-working-backwards.md` |
 | Write an Amazon-style PR/FAQ | `prompts/strategy/04-amazon-pr-faq.md` |
 | Map feature dependencies | `prompts/strategy/05-dependency-identification.md` |
