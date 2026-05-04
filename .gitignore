@@ -12,3 +12,6 @@ mcp-server/.venv/
 
 # Editor
 .vscode/
+
+# Git worktrees
+.worktrees/
