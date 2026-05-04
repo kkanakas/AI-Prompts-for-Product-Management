@@ -7,7 +7,7 @@ description: >
   RACI, DACI, OKRs, PRDs, user stories, working backwards, PR/FAQ, Big Rock decomposition,
   launch gates, value proposition design, dependency mapping, private preview planning,
   architecture diagrams, release notes, user journey maps, synthetic users, weekly leadership
-  updates, AI product metrics, wireframes, clickthrough demos, Wizard of Oz protocols,
+  updates, AI product metrics, AI PRDs, wireframes, clickthrough demos, Wizard of Oz protocols,
   AI feature stubs, agent workflow simulations, API-connected prototypes, narrative prototypes,
   and data dashboard prototypes.
 ---
@@ -134,6 +134,7 @@ Write requirements that engineering teams can act on.
 | Use Case Documentation | `prompts/prds/02-use-case-documentation.md` |
 | Features and User Stories | `prompts/prds/03-features-and-user-stories.md` |
 | Given / When / Then Criteria Generator (with And chaining and But negative assertions) | `prompts/prds/04-given-when-then.md` |
+| AI Product Requirements Document | `prompts/prds/05-ai-prd.md` |
 
 ### Prototyping
 Build and test prototypes across every fidelity level.
@@ -227,6 +228,7 @@ Visualize the end-to-end customer experience.
 | Write use case documentation | `prompts/prds/02-use-case-documentation.md` |
 | Generate user stories | `prompts/prds/03-features-and-user-stories.md` |
 | Generate Given/When/Then (with And/But) from a requirements doc | `prompts/prds/04-given-when-then.md` |
+| Write an AI Product Requirements Document | `prompts/prds/05-ai-prd.md` |
 | Write a working backwards plan | `prompts/strategy/03-working-backwards.md` |
 | Write an Amazon-style PR/FAQ | `prompts/strategy/04-amazon-pr-faq.md` |
 | Map feature dependencies | `prompts/strategy/05-dependency-identification.md` |
