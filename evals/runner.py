@@ -97,19 +97,18 @@ def run_evals(
 
         llm_scores = None
         if tier == "all":
-            from evals.evaluators.llm_judge import score_prompt
-            llm_scores = score_prompt(
-                prompt_id=prompt["id"],
-                category=prompt["category"],
+            from evals.evaluators.llm_judge import run_llm_judge
+            llm_scores = run_llm_judge(
                 filled_prompt=filled,
+                category=prompt["category"],
                 api_key=anthropic_api_key,
             )
 
         duration_ms = int((time.time() - start) * 1000)
         structural_passed = all(c.passed for c in structural_checks)
-        llm_score_values = [s.score for s in llm_scores] if llm_scores else []
+        non_bonus_scores = [s.score for s in llm_scores if not s.is_bonus] if llm_scores else []
         overall_score = (
-            sum(llm_score_values) / len(llm_score_values) if llm_score_values else None
+            sum(non_bonus_scores) / len(non_bonus_scores) if non_bonus_scores else None
         )
 
         results.append(

@@ -1,8 +1,10 @@
 import sys
 from pathlib import Path
+from unittest.mock import patch
 import pytest
 
 from evals.runner import _extract_template_sections, _fill_template, run_evals
+from evals.types import ScoreResult
 
 
 def test_extract_template_sections_finds_headers():
@@ -61,3 +63,28 @@ def test_run_evals_category_filter():
     results = run_evals(category="metrics", tier="structural")
     for r in results:
         assert r.category == "metrics"
+
+
+def test_run_evals_tier_all_calls_llm_judge(monkeypatch):
+    """tier='all' should call run_llm_judge and populate llm_scores + overall_score."""
+    mock_scores = [
+        ScoreResult(dimension="completeness", score=4, rationale="Good.", is_bonus=False),
+        ScoreResult(dimension="placeholder_substitution", score=5, rationale="Clean.", is_bonus=False),
+        ScoreResult(dimension="format_compliance", score=4, rationale="Fine.", is_bonus=False),
+        ScoreResult(dimension="actionability", score=3, rationale="Mostly.", is_bonus=False),
+        ScoreResult(dimension="specificity", score=4, rationale="Specific.", is_bonus=False),
+    ]
+
+    import evals.evaluators.llm_judge as llm_judge_module
+
+    monkeypatch.setattr(llm_judge_module, "run_llm_judge", lambda **kwargs: mock_scores)
+
+    results = run_evals(prompt_id="prds/05-ai-prd", tier="all", anthropic_api_key="fake")
+    assert len(results) == 1
+    result = results[0]
+
+    assert result.llm_scores is not None
+    assert len(result.llm_scores) == 5
+    assert result.overall_score is not None
+    # mean of [4, 5, 4, 3, 4] = 20/5 = 4.0
+    assert abs(result.overall_score - 4.0) < 1e-9
