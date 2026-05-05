@@ -12,5 +12,8 @@
   "[CURRENT QUARTER]": "Q3 2026",
   "[INITIATIVES ALREADY PLANNED]": "Redesigning the first-run experience for new accounts; shipping in-app contract template library (20 templates); A/B testing the AI review feature placement in the upload flow",
   "[KEY CONSTRAINTS]": "Dependent on Platform team for SSO integration (ETA: week 4 of Q3); designer on parental leave weeks 8–12; cannot change the Stripe billing integration until Q4",
-  "[BASELINE METRICS]": "Time-to-first-contract-uploaded: 4.2 days; AI review feature activation rate: 31% within 60 days; 30-day retention: 67%; free-to-paid conversion: 5.8%"
+  "[BASELINE METRICS]": "Time-to-first-contract-uploaded: 4.2 days; AI review feature activation rate: 31% within 60 days; 30-day retention: 67%; free-to-paid conversion: 5.8%",
+  "[N]": "1",
+  "[OBJECTIVE STATEMENT]": "Activate and retain mid-market accounts by delivering time-to-value within the first week",
+  "[COMPANY OBJECTIVE IT SUPPORTS]": "O1: Become the default contract management platform for mid-market in-house legal teams"
 }

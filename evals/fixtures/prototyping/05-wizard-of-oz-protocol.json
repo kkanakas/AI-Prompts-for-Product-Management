@@ -12,5 +12,6 @@
   "[HYPOTHESIS]": "Legal ops managers will act on AI risk highlights for standard clause types (IP ownership, indemnification cap, governing law) without independent verification, but will escalate AI-flagged custom clauses to senior counsel",
   "[AI_BEHAVIOR]": "For each clause flagged as high-risk: display a yellow highlight on the clause text, a one-sentence plain-English risk summary, a confidence score (High / Medium / Low), and a suggested action (Accept / Request modification / Escalate). Wizard selects from a prepared playbook of 8 response types based on which clause the participant hovers over.",
   "[TEST_FORMAT]": "Moderated remote session via Zoom with screen share; wizard operates from a separate hidden browser tab with a pre-loaded response playbook; facilitator and wizard are different people",
-  "[PARTICIPANT_COUNT]": "8"
+  "[PARTICIPANT_COUNT]": "8",
+  "[PRODUCT_NAME]": "Clearpath AI Contract Review"
 }

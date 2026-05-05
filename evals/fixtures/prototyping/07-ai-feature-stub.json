@@ -10,5 +10,6 @@
   "[TRIGGER_ACTION]": "User uploads a contract PDF or pastes contract text into the review workspace and clicks 'Analyze contract'",
   "[OUTPUT_FORMAT]": "Inline yellow highlights on the clause text, a right-hand panel listing all flagged clauses with: clause type, risk level badge (High/Medium/Low), one-sentence plain-English risk description, confidence score percentage, and a recommended action button (Accept / Request changes / Escalate to senior counsel)",
   "[PROTOTYPE_TYPE]": "Wizard of Oz session with 8 legal ops managers — wizard selects pre-written stub responses from a playbook based on which clause the participant hovers over",
-  "[TRUST_HYPOTHESIS]": "Legal ops managers will accept AI recommendations for standard clause types (IP ownership, indemnification cap, governing law) without reading the full clause, but will escalate AI-flagged non-standard or custom clauses regardless of AI confidence score"
+  "[TRUST_HYPOTHESIS]": "Legal ops managers will accept AI recommendations for standard clause types (IP ownership, indemnification cap, governing law) without reading the full clause, but will escalate AI-flagged non-standard or custom clauses regardless of AI confidence score",
+  "[N]": "1"
 }

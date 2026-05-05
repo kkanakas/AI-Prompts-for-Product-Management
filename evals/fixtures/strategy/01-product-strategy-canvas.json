@@ -13,5 +13,13 @@
   "[CURRENT SOLUTION LANDSCAPE]": "Email + Google Drive (most common), legacy CLM tools (Ironclad, DocuSign CLM) that require 6-month implementation, or no system at all — teams rely on a paralegal as the single source of truth",
   "[OUR DIFFERENTIATORS]": "AI-native contract review that surfaces risks in under 60 seconds, deploys in one day with no IT involvement, priced for mid-market not enterprise, built specifically for in-house legal workflow not law firm workflow",
   "[STRATEGIC CONSTRAINTS]": "24-month runway, team of 18, no enterprise sales motion yet — limited to self-serve and inside sales; GDPR and SOC 2 Type II compliance required for EU expansion in Q3",
-  "[12-MONTH GOAL]": "Sign 75 new mid-market accounts and reach $2.2M ARR from that segment, establishing Clearpath as the default CLM for in-house legal teams under 20 people"
+  "[12-MONTH GOAL]": "Sign 75 new mid-market accounts and reach $2.2M ARR from that segment, establishing Clearpath as the default CLM for in-house legal teams under 20 people",
+  "[CUSTOMER]": "in-house legal operations managers",
+  "[OUTCOME]": "fast, AI-assisted contract review",
+  "[CURRENT PAIN]": "spending hours reading contracts manually",
+  "[JOB TO BE DONE]": "need to review vendor contracts quickly and catch risk",
+  "[CATEGORY]": "AI-native contract management platform",
+  "[KEY BENEFIT]": "surfaces risks in under 60 seconds",
+  "[ALTERNATIVE]": "legacy CLM tools like Ironclad",
+  "[LIMITATION]": "require 6-month implementation and were built for law firms"
 }
