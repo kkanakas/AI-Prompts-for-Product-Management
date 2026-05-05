@@ -1,0 +1,37 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(/opt/homebrew/bin/python3.14 -m pytest --version)",
+      "Bash(/opt/homebrew/bin/python3.13 -m pytest --version)",
+      "Bash(PYTHONPATH=/Users/stynger76/Documents/GitHub/AI-Prompts-for-Product-Management/.worktrees/evals-harness /opt/homebrew/bin/python3.14 -m pytest tests/evals/test_cli.py -v)",
+      "Bash(PYTHONPATH=/Users/stynger76/Documents/GitHub/AI-Prompts-for-Product-Management/.worktrees/evals-harness /opt/homebrew/bin/python3.14 -m pytest tests/evals/test_runner.py -v)",
+      "Bash(/Users/stynger76/Documents/GitHub/AI-Prompts-for-Product-Management/mcp-server/.venv/bin/python -m pip install pytest)",
+      "Read(//opt/homebrew/Cellar/python@3.14/3.14.4_1/bin/**)",
+      "Bash(PYTHONPATH=/Users/stynger76/Documents/GitHub/AI-Prompts-for-Product-Management/.worktrees/evals-harness:/Users/stynger76/Documents/GitHub/AI-Prompts-for-Product-Management/mcp-server/.venv/lib/python3.14/site-packages /Users/stynger76/Documents/GitHub/AI-Prompts-for-Product-Management/mcp-server/.venv/bin/python -m pytest --version)",
+      "Bash(/opt/homebrew/Cellar/python@3.14/3.14.4_1/bin/pip3.14 install *)",
+      "Bash(PYTHONPATH=/Users/stynger76/Documents/GitHub/AI-Prompts-for-Product-Management/.worktrees/evals-harness /Users/stynger76/Documents/GitHub/AI-Prompts-for-Product-Management/mcp-server/.venv/bin/python -m pytest tests/evals/test_cli.py -v)",
+      "Bash(PYTHONPATH=/Users/stynger76/Documents/GitHub/AI-Prompts-for-Product-Management/.worktrees/evals-harness /Users/stynger76/Documents/GitHub/AI-Prompts-for-Product-Management/mcp-server/.venv/bin/python -m pytest tests/evals/ -v)",
+      "Bash(git -C /Users/stynger76/Documents/GitHub/AI-Prompts-for-Product-Management/.worktrees/evals-harness add evals/cli.py tests/evals/test_cli.py)",
+      "Bash(git -C /Users/stynger76/Documents/GitHub/AI-Prompts-for-Product-Management/.worktrees/evals-harness commit -m ' *)",
+      "Bash(git -C /Users/stynger76/Documents/GitHub/AI-Prompts-for-Product-Management/.worktrees/evals-harness log --oneline -3)",
+      "Bash(python -m pytest tests/evals/test_llm_judge.py -v)",
+      "Bash(pip show *)",
+      "Bash(python -c \"import sys; print\\(sys.path[:5]\\)\")",
+      "Bash(python -c \"import anthropic; print\\(anthropic.__version__\\)\")",
+      "Bash(python -m pytest tests/evals/test_structural.py -v)",
+      "Bash(/Users/stynger76/Documents/GitHub/AI-Prompts-for-Product-Management/mcp-server/.venv/bin/pip install *)",
+      "Bash(/Users/stynger76/Documents/GitHub/AI-Prompts-for-Product-Management/mcp-server/.venv/bin/python -m pip install anthropic)",
+      "Bash(uv --version)",
+      "Bash(uv pip *)",
+      "Bash(python -m pytest tests/evals/ -v)",
+      "Bash(python -m pytest tests/evals/test_runner.py::test_run_evals_tier_all_calls_llm_judge -v)",
+      "Bash(python -m pytest tests/evals/test_generator.py -v)",
+      "Bash(python -m evals run --tier structural)",
+      "Bash(echo \"EXIT CODE: $?\")",
+      "Bash(python -m evals status)",
+      "Bash(python -m pytest tests/evals/test_e2e.py -v)",
+      "Bash(git -C /Users/stynger76/Documents/GitHub/AI-Prompts-for-Product-Management/.worktrees/evals-harness status)",
+      "Bash(git -C /Users/stynger76/Documents/GitHub/AI-Prompts-for-Product-Management/.worktrees/evals-harness log --oneline -5)"
+    ]
+  }
+}
