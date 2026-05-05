@@ -1,0 +1,28 @@
+name: Evals
+
+on: [push]
+
+jobs:
+  evals:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r evals/requirements.txt
+
+      - name: Run structural evals on changed prompts
+        run: python -m evals run --changed-only --tier structural
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: eval-results
+          path: evals/results/
+          if-no-files-found: ignore
