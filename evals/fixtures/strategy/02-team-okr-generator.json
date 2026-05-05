@@ -1,0 +1,16 @@
+{
+  "_meta": {
+    "prompt_id": "strategy/02-team-okr-generator",
+    "generated": "handwritten",
+    "author": "PM team",
+    "date": "2026-05-04"
+  },
+  "[COMPANY OKRS]": "O1: Become the default contract management platform for mid-market in-house legal teams. KR1: Grow ARR from $12M to $18M by end of Q4. KR2: Achieve NPS of 50+ across mid-market segment. KR3: Reach 85% of customers actively using AI review feature within 60 days of activation.",
+  "[TEAM NAME]": "Activation & Adoption Squad",
+  "[PRODUCT AREA OR DOMAIN]": "User onboarding, first-contract-uploaded workflow, AI review feature activation, in-product education and empty states",
+  "[TEAM SIZE AND ROLES]": "1 PM (me), 3 engineers, 1 designer, 0.5 data analyst (shared with Growth team)",
+  "[CURRENT QUARTER]": "Q3 2026",
+  "[INITIATIVES ALREADY PLANNED]": "Redesigning the first-run experience for new accounts; shipping in-app contract template library (20 templates); A/B testing the AI review feature placement in the upload flow",
+  "[KEY CONSTRAINTS]": "Dependent on Platform team for SSO integration (ETA: week 4 of Q3); designer on parental leave weeks 8–12; cannot change the Stripe billing integration until Q4",
+  "[BASELINE METRICS]": "Time-to-first-contract-uploaded: 4.2 days; AI review feature activation rate: 31% within 60 days; 30-day retention: 67%; free-to-paid conversion: 5.8%"
+}

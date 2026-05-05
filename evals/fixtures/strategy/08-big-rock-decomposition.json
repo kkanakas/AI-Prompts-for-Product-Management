@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "prompt_id": "strategy/08-big-rock-decomposition",
+    "generated": "handwritten",
+    "author": "PM team",
+    "date": "2026-05-04"
+  },
+  "[INITIATIVE_NAME]": "AI-Powered Contract Intelligence Platform",
+  "[STRATEGIC_INTENT]": "Transform Clearpath from a contract storage and routing tool into an intelligent risk advisor — enabling in-house legal teams to review contracts 10x faster while catching risks that currently slip through manual review",
+  "[TARGET_USER]": "In-house legal counsel and legal operations managers at mid-market companies; secondary audience is the non-legal business stakeholders (sales, procurement, HR) who initiate contract requests",
+  "[TEAM_TYPE]": "Two product squads (Contract Review Squad, Workflow Automation Squad) plus one shared Platform team for ML infrastructure",
+  "[CONSTRAINTS]": "Must not break existing contract storage and e-signature integrations; board demo required at end of Q4 2026; ML infrastructure team has a 6-engineer cap; SOC 2 Type II audit in October cannot be disrupted",
+  "[DEPENDENCIES]": "ML infrastructure platform (Platform team — parallel track); legal data labeling partnership with external vendor (contract signed, onboarding Q3); GDPR legal review of AI processing (Legal — ETA: August 2026)",
+  "[CURRENT_STATE]": "Contracts are uploaded, routed for signatures, and stored — but no AI analysis exists today. Legal teams extract risks manually by reading contracts in full, a process that takes 45–90 minutes per contract and misses non-obvious clause interactions"
+}

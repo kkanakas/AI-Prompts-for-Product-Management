@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "prompt_id": "metrics/02-ai-product-metrics",
+    "generated": "handwritten",
+    "author": "PM team",
+    "date": "2026-05-04"
+  },
+  "[PRODUCT_NAME]": "Aria — AI Support Assistant",
+  "[PRODUCT_DESCRIPTION]": "LLM-powered assistant that drafts replies to inbound support tickets by retrieving relevant knowledge base articles and generating natural-language responses for Tier-1 agents to review and send",
+  "[TARGET_USERS]": "Tier-1 support agents handling 80+ tickets per day; secondary audience is end customers who receive the AI-assisted responses",
+  "[AI_MODALITY]": "RAG pipeline with claude-sonnet-4-6, retrieval from Confluence knowledge base via embedding search, streamed responses displayed in the support agent UI with a one-click accept or edit workflow",
+  "[BUSINESS_OUTCOME]": "Reduce average handle time for support tickets by 40% (from 8 min to 4.8 min) and deflect 25% of inbound tickets to self-serve within 6 months of launch",
+  "[CURRENT_INSTRUMENTATION]": "Basic API error rate and uptime via Datadog; ticket volume and handle time tracked in Zendesk; no product-level AI-specific metrics currently instrumented",
+  "[KNOWN_RISKS]": "Hallucinations in responses about billing terms and legal commitments; latency spikes during peak hours (9–11am EST) causing agent frustration; agents over-trusting AI for complex escalation cases that require human judgment"
+}

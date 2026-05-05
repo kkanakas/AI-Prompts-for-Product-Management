@@ -1,0 +1,18 @@
+{
+  "_meta": {
+    "prompt_id": "prds/05-ai-prd",
+    "generated": "handwritten",
+    "author": "PM team",
+    "date": "2026-05-04"
+  },
+  "[PRODUCT_NAME]": "Aria — AI Support Assistant",
+  "[ONE_LINE_DESCRIPTION]": "Drafts replies to inbound support tickets and surfaces the most relevant knowledge base articles for Tier-1 support agents",
+  "[STAGE]": "Discovery",
+  "[AUTHOR]": "Kartik K., Senior PM — Platform",
+  "[DATE]": "2026-05-04",
+  "[OBJECTIVE]": "Reduce average handle time for Tier-1 support agents by 40% through AI-assisted response drafting",
+  "[BUSINESS_PROBLEM]": "Support agents spend 60% of their time on ticket types that follow predictable resolution patterns — password resets, billing inquiries, shipping status — driving high operational cost and slow response times despite low required judgment",
+  "[TARGET_USERS]": "Tier-1 support agents handling 80+ tickets per day; secondary audience is end customers on the self-serve plan who interact with the AI-suggested responses",
+  "[BUSINESS_IMPACT]": "$2.4M annual cost reduction from reduced handle time; 40% reduction in average handle time from 8 min to 4.8 min; 15-point CSAT improvement driven by faster, more consistent responses",
+  "[STAGE_MILESTONES]": "Discovery complete: 2026-05-30 / Model selection and data audit: 2026-07-15 / Internal validation with 10 agents: 2026-08-31 / Staged production deployment: 2026-09-30"
+}

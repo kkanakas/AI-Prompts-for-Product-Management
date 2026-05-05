@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "prompt_id": "metrics/01-feature-success-metrics",
+    "generated": "handwritten",
+    "author": "PM team",
+    "date": "2026-05-04"
+  },
+  "[FEATURE_NAME]": "Saved Search Alerts",
+  "[FEATURE_DESCRIPTION]": "Allows registered users to save up to 10 search queries and receive email notifications when new results matching those queries are published to the platform",
+  "[TARGET_USERS]": "Power users and research analysts who monitor specific topics continuously; primarily paid-tier subscribers running competitive intelligence programs",
+  "[FEATURE_GOAL]": "Increase weekly active usage by 20% and reduce churn among research-heavy users by surfacing relevant content without requiring daily manual login and search"
+}

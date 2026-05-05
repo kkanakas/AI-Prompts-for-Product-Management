@@ -1,0 +1,16 @@
+{
+  "_meta": {
+    "prompt_id": "prototyping/05-wizard-of-oz-protocol",
+    "generated": "handwritten",
+    "author": "PM team",
+    "date": "2026-05-04"
+  },
+  "[FEATURE_NAME]": "AI Contract Risk Highlighter — surfaces high-risk clauses with a one-sentence plain-English explanation and a recommended action",
+  "[PRODUCT_CONTEXT]": "Clearpath — B2B SaaS contract management platform used by in-house legal teams at mid-market companies. Agents are legal ops managers and junior lawyers, not technical users.",
+  "[USER_TASK]": "Review an NDA sent by a new enterprise vendor, identify any clauses that pose risk to Clearpath, and decide whether to sign, request changes, or escalate to senior counsel",
+  "[PARTICIPANT_PROFILE]": "In-house legal operations managers with 2–6 years of experience, accustomed to reviewing contracts manually, no prior experience with AI contract review tools, working at companies with 500–2,000 employees",
+  "[HYPOTHESIS]": "Legal ops managers will act on AI risk highlights for standard clause types (IP ownership, indemnification cap, governing law) without independent verification, but will escalate AI-flagged custom clauses to senior counsel",
+  "[AI_BEHAVIOR]": "For each clause flagged as high-risk: display a yellow highlight on the clause text, a one-sentence plain-English risk summary, a confidence score (High / Medium / Low), and a suggested action (Accept / Request modification / Escalate). Wizard selects from a prepared playbook of 8 response types based on which clause the participant hovers over.",
+  "[TEST_FORMAT]": "Moderated remote session via Zoom with screen share; wizard operates from a separate hidden browser tab with a pre-loaded response playbook; facilitator and wizard are different people",
+  "[PARTICIPANT_COUNT]": "8"
+}

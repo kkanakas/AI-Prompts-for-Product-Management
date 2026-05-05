@@ -1,0 +1,13 @@
+{
+  "_meta": {
+    "prompt_id": "prds/04-given-when-then",
+    "generated": "handwritten",
+    "author": "PM team",
+    "date": "2026-05-04"
+  },
+  "[PASTE_DOCUMENT]": "## Feature: Saved Search Alerts\n\nRegistered users can save a search query and opt-in to receive email notifications when new results matching that query are added to the platform.\n\n### Functional Requirements\n- FR-01: Registered users can save up to 10 active search queries per account\n- FR-02: Users can enable or disable email notifications per saved search independently\n- FR-03: Notification emails are delivered within 15 minutes of new matching results appearing\n- FR-04: Users can delete a saved search; deletion immediately cancels all future notifications for that query\n- FR-05: Each notification email contains a deep link that opens the platform pre-filtered to the saved search results\n\n### Non-Functional Requirements\n- NFR-01: Notification delivery latency must be under 15 minutes at the 95th percentile under normal load\n- NFR-02: The notification pipeline must handle 10,000 concurrent active saved searches without throughput degradation\n\n### Business Rules\n- BR-01: Free-tier accounts are limited to 3 saved searches; paid-tier accounts have no limit\n- BR-02: Notifications for a given saved search must not be sent more than once per 24-hour window regardless of how many new results match",
+  "[FEATURE_NAME]": "Saved Search Alerts",
+  "[ACTORS]": "Registered user (free tier), registered user (paid tier), system notification service, platform administrator",
+  "[PRODUCT]": "B2B SaaS market intelligence platform — web application used by research analysts and competitive intelligence teams",
+  "[QA_TOOL]": "Cucumber / Gherkin"
+}
