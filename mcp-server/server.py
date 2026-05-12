@@ -25,7 +25,7 @@ CATEGORY_DESCRIPTIONS = {
     "customer-discovery": "Interview guides, transcript analysis, JTBD, survey analysis, sentiment analysis, pattern finding",
     "idea-evaluation": "RICE scoring, pre-mortem, assumption mapping, validation questions, Kano analysis, MoSCoW prioritization",
     "ideation": "Problem-to-solution generation, SCAMPER, VRIO, MECE analysis",
-    "market-research": "Structured market analysis, cross-referencing sources",
+    "market-research": "Structured market analysis, cross-referencing sources, TAM/SAM/SOM sizing with top-down and bottom-up methodology, competitive analysis with value chain mapping, inefficiency identification, and SWOT anchored to 10-K filings and analyst reports",
     "metrics": "Feature success metrics, and AI product metrics frameworks covering latency, task completion, output quality, business value, and trust and safety",
     "prds": "Product Requirements Documents (Amazon 6-pager style and full AI PRD), use case documentation, features and user stories with Given/When/Then acceptance criteria (with And chaining and But negative assertions), sprint planning, and a dedicated AI PRD covering executive summary, problem statement, success metrics, AI features, data requirements, model requirements, UX and human interaction, ethical risk and compliance, milestones, and stakeholders",
     "prototyping": "Lo-fi wireframe briefs, mid-fi flow specs, clickthrough demo scripts, Wizard of Oz protocols, prompt-powered UI generation, AI feature stubs, agent workflow simulations, API-connected LLM prototypes, narrative prototypes, and data dashboard prototypes",
@@ -121,7 +121,7 @@ def list_prompts(category: str = "") -> str:
                   'trend-analysis', 'synthetic-users', 'prds', 'metrics',
                   'prototyping', 'release-notes-generator', 'user-journey-maps',
                   'architecture-diagrams', 'communications', 'stakeholder-management',
-                  'strategy'. Leave empty to list all 55+ prompts across 16 categories.
+                  'strategy'. Leave empty to list all 56+ prompts across 16 categories.
 
     Returns:
         JSON array — each item has: id, title, phase, purpose, category.

@@ -28,6 +28,10 @@ description: >
   "launch checklist", "release criteria", "waiver", "post-release monitoring",
   "customer meeting", "meeting transcript", "meeting notes", "customer update",
   "meeting summary", "slack update", "jira from transcript",
+  "TAM", "SAM", "SOM", "total addressable market", "serviceable addressable market",
+  "serviceable obtainable market", "market sizing", "value chain", "value chain analysis",
+  "market inefficiency", "10-K analysis", "EDGAR", "funding rounds", "SWOT analysis",
+  "competitive intelligence", "top-down market sizing", "bottom-up market sizing",
   or any product management task.
 ---
 
@@ -54,7 +58,7 @@ Each prompt follows the same structure: context, inputs, and a defined output fo
 | Customer Discovery | `prompts/customer-discovery/` | Interview guides, transcript analysis, JTBD, survey analysis, sentiment analysis of work items, pattern finding |
 | Idea Evaluation | `prompts/idea-evaluation/` | RICE scoring, pre-mortem, assumption mapping, validation questions, Kano analysis, MoSCoW prioritization |
 | Ideation | `prompts/ideation/` | Problem-to-solution generation, SCAMPER, VRIO, MECE analysis |
-| Market Research | `prompts/market-research/` | Structured market analysis, cross-referencing sources |
+| Market Research | `prompts/market-research/` | Structured market analysis, cross-referencing sources, TAM/SAM/SOM sizing, competitive analysis with value chain mapping and SWOT |
 | Metrics | `prompts/metrics/` | Feature success metrics, and AI product metrics frameworks covering latency, task completion, output quality, business value, and trust and safety |
 | PRDs | `prompts/prds/` | Product Requirements Documents (Amazon 6-pager style and AI PRD), use case documentation, features and user stories, and a Given/When/Then acceptance criteria generator with And chaining and But negative assertions |
 | Prototyping | `prompts/prototyping/` | Lo-fi wireframe briefs, mid-fi flow specs, clickthrough demo scripts, Wizard of Oz protocols, prompt-powered UI generation, AI feature stubs, agent workflow simulations, API-connected LLM prototypes, narrative prototypes, and data dashboard prototypes |
@@ -92,6 +96,7 @@ Each prompt follows the same structure: context, inputs, and a defined output fo
 | Design a value proposition canvas | `prompts/strategy/07-value-proposition.md` |
 | Decompose a Big Rock into epics and features | `prompts/strategy/08-big-rock-decomposition.md` |
 | Define and run launch gate reviews | `prompts/strategy/11-launch-gates.md` |
+| Size TAM/SAM/SOM, map value chain, and run full competitive analysis with SWOT | `prompts/market-research/04-tam-sam-som-competitive-analysis.md` |
 
 ## MCP Server
 
